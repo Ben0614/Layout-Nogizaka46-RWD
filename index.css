@@ -1,0 +1,442 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: purple
+}
+
+li{
+    list-style-type: none;
+}
+
+.wrap{
+    background: #fff url(./images/bg.jpg) center 0 repeat-x;
+}
+.container{
+    width: 980px;
+    margin: auto;
+}
+
+.flex-coulmn{
+    flex-direction: column;
+}
+
+.header{
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    padding:15px;
+    margin-bottom: 10px;
+}
+
+.logo{
+    width: 280px;
+    height: 84px;
+}
+
+.logo a img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav li{
+    width: 105px;
+    height: 46px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.nav li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    color: #fff;
+    font-size: 500;
+    text-align: center;
+    font-size: 14px;
+    line-height: 46px;
+    text-decoration: none;
+}
+/* border-radius: 10px; */
+
+.nav li:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.nav li:last-child{
+    border-radius: 0 5px 5px 0;
+}
+
+.banner{
+position: relative;
+}
+
+.banner>img{
+    border-radius: 10px;
+}
+
+.small-pic{
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 15px;
+right:10px;
+}
+
+/* banner裡的三張圖，用背景做 */
+.small-pic .live{
+   width: 205px;
+   height: 88px;
+   margin-bottom: 5px;
+   background: url(./images/banner327.png);
+
+}
+.small-pic .culture{
+    width: 205px;
+    height: 88px;
+    margin-bottom: 5px;
+    background: url(./images/banner331.png);
+
+}
+.small-pic .fingers{
+    width: 205px;
+    height: 88px;
+    margin-bottom: 5px;
+    background: url(./images/banner324.png);
+}
+
+/* 幫三張圖添加邊框 */
+.small-pic .live .pic-border{
+   width: 205px;
+   height: 88px;
+   background: url(./images/idxbanner_interface.png);
+
+}
+.small-pic .culture .pic-border{
+    width: 205px;
+    height: 88px;
+    background: url(./images/idxbanner_interface.png);
+
+}
+.small-pic .fingers .pic-border{
+    width: 205px;
+    height: 88px;
+    background: url(./images/idxbanner_interface.png);
+}
+
+.center-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-pic-text{
+    font-size: 14px;
+    background-color: #ffff00;
+    color:#7e1083;
+}
+
+.center-text p a {
+    font-size: 12px;
+    color:#e2437a
+}
+
+.center-text p:nth-child(2){
+    margin-bottom: 20px;
+}
+
+.main{
+    padding-top: 7px;
+    width: 100%;
+    display: flex;
+}
+
+.right{
+    width: 70%;
+    order:1
+}
+
+.left{
+    width: 30%;
+    order:0;
+}
+
+.nogikoi{
+    width: 100%;
+    height: 148px;
+    margin-bottom: 5px;
+}
+.nogikoi img{
+    width: 100%;
+    height: 100%;
+}
+
+.news-tag{
+    display: flex;
+    justify-content: space-between;
+    background: url(./images/pattern.jpg);
+    padding:10px;
+    border-radius: 5px;
+}
+
+.news-tag .title{
+    width: 520px;
+    height: 20px;
+    background: url(./images/h2idxnews.png);
+}
+
+.news-tag .more a {
+    padding-right: 20px;
+    color:#fff;
+    position: relative;
+    font-size: 12px;
+}
+
+.news-tag .more a::after{
+    content:'';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: 3px;
+    background: url(./images/schedule-release.png) no-repeat;
+}
+
+.news-text{
+    font-size: 12px;
+    color:#2d2d2d;
+    padding:15px;
+}
+.news-text .item{
+    display: flex;
+    padding-bottom: 15px;;
+}
+
+.news-text .item-content{
+    display: flex;
+    flex-direction: column;
+    padding-left:25px;
+    position: relative;
+}
+
+.news-text .item-content::before{
+    content:'';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    left: 10px;
+    background: url(./images/schedule-handshake.png) no-repeat;
+}
+
+.schedule-tag{
+    display: flex;
+    justify-content: space-between;
+    background: url(./images/pattern.jpg);
+    padding:10px;
+    border-radius: 5px;
+}
+
+.schedule-tag .title{
+    width: 520px;
+    height: 20px;
+    background: url(./images/schedule.png) no-repeat;
+}
+
+.schedule-tag .more a {
+    padding-right: 20px;
+    color:#fff;
+    position: relative;
+    font-size: 12px;
+}
+
+.schedule-tag .more a::after{
+    content:'';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: 3px;
+    background: url(./images/schedule-release.png) no-repeat;
+}
+
+.schedule-text{
+    font-size: 12px;
+    color:#2d2d2d;
+    padding:15px;
+}
+.schedule-text .item{
+    display: flex;
+    padding-bottom: 15px;;
+}
+
+.schedule-text .item-content{
+    display: flex;
+    flex-direction: column;
+    padding-left:70px;
+    position: relative;
+}
+
+.schedule-text .item-content::before{
+    content:'';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    left: 10px;
+    background: url(./images/schedule-tv.png) no-repeat;
+}
+
+.schedule-text .item-content::after{
+    content:'TV';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 25px;
+   color:purple;
+}
+
+.blog-video{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.blog{
+    width: calc(55% - 5px);
+}
+
+.blog-tag{
+    display: flex;
+    justify-content: space-between;
+    background: url(./images/pattern.jpg);
+    padding:10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.blog-tag .title{
+    width: 80%;
+    height: 20px;
+    background: url(./images/h2idxblog.png) no-repeat;
+}
+
+.blog-tag .more a {
+    padding-right: 20px;
+    color:#fff;
+    position: relative;
+    font-size: 12px;
+}
+
+.blog-tag .more a::after{
+    content:'';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: 3px;
+    background: url(./images/schedule-release.png) no-repeat;
+}
+
+.blog .item{
+    display: flex;
+    padding:10px;
+    border:1px solid purple;
+    margin-bottom: -1px;
+}
+
+.blog .item:last-child{
+    border-radius: 0 0 5px 5px;
+}
+
+.blog .item .text{
+   padding:0 10px;
+}
+
+.blog .item .text .date{
+    font-size: 14px;
+}
+.blog .item .text .name{
+    padding:2px 5px;
+    background-color: #ed69d6;
+    color:#fff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.blog .item .text .title{
+    margin-top: 10px;
+}
+
+.blog .item p{
+    font-size: 12px;
+    line-height: 1.7;
+    color:#2d2d2d;
+}
+
+.blog .item .text p a{
+    color: purple
+}
+
+.video{
+    width: calc(45% - 5px);
+}
+
+.video-tag{
+    display: flex;
+    justify-content: space-between;
+    background: url(./images/pattern.jpg);
+    padding:10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.video-tag .title{
+    width: 60%;
+    height: 20px;
+    background: url(./images/h2idxvideo.png) no-repeat;
+}
+
+ .video-tag .more a {
+    padding-right: 20px;
+    color:#fff;
+    position: relative;
+    font-size: 12px;
+} 
+
+.video-tag .more a::after{
+    content:'';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: 3px;
+    background: url(./images/schedule-release.png) no-repeat;
+}
+
+.video .item-group{
+    padding: 10px 10px 0 10px;
+    border: 1px solid purple;
+    border-radius: 0 0 5px 5px;
+    font-size: 12px;
+}
+
+.video .item-group .item{
+    margin-bottom: 10px;
+}
+
+.video .item-group .extra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video .item-group .extra p{
+    padding-top: 10px;
+}
