@@ -15,6 +15,7 @@ li{
 .wrap{
     background: #fff url(./images/bg.jpg) center 0 repeat-x;
 }
+
 .container{
     width: 980px;
     margin: auto;
@@ -22,6 +23,18 @@ li{
 
 .flex-coulmn{
     flex-direction: column;
+}
+
+.lang-selector{
+    position:fixed;
+    right:15px;
+    bottom: 15px;
+    width: 140px;
+    height: 53px;
+}
+.lang-selector img{
+    width: 100%;
+    height: 100%;
 }
 
 .header{
@@ -269,24 +282,24 @@ right:10px;
     background: url(./images/schedule-release.png) no-repeat;
 }
 
-.schedule-text{
+.right .schedule-text{
     font-size: 12px;
     color:#2d2d2d;
     padding:15px;
 }
-.schedule-text .item{
+.right .schedule-text .item{
     display: flex;
     padding-bottom: 15px;;
 }
 
-.schedule-text .item-content{
+.right .schedule-text .item-content{
     display: flex;
     flex-direction: column;
     padding-left:70px;
     position: relative;
 }
 
-.schedule-text .item-content::before{
+.right .schedule-text .item-content::before{
     content:'';
     position: absolute;
     width: 20px;
@@ -296,7 +309,7 @@ right:10px;
     background: url(./images/schedule-tv.png) no-repeat;
 }
 
-.schedule-text .item-content::after{
+.right .schedule-text .item-content::after{
     content:'TV';
     position: absolute;
     width: 20px;
@@ -442,6 +455,13 @@ right:10px;
     padding-top: 10px;
 }
 
+.calendar-schedule{
+    border:1px solid purple;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
 .calendar-schedule .calendar-tag{
     display: flex;
     justify-content: space-between;
@@ -454,6 +474,11 @@ right:10px;
     width: 520px;
     height: 20px;
     background: url(./images/schedule.png) no-repeat;
+}
+
+.calendar-main {
+    padding-bottom: 10px;
+    background-color: #fff;
 }
 
 .calendar-main .calendar-title{
@@ -511,4 +536,223 @@ right:10px;
 
 .calendar-bd table tbody td span{
     display: block;
+}
+
+.schedule-main .schedule-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px dashed purple;
+    background-color: #f3e9f5;
+}
+
+.schedule-main .schedule-title h4{
+    color:purple;
+    font-size: 12px;
+}
+
+.schedule-main .schedule-text{
+    background-color: #f3e9f5;
+}
+
+.schedule-main .schedule-text .item-content a{
+    font-size: 12px;
+    color:#2d2d2d;
+    line-height: 2;
+}
+
+.left .schedule-text{
+    font-size: 12px;
+    color:#2d2d2d;
+    padding:15px;
+}
+.left .schedule-text .item{
+    display: flex;
+    padding-bottom: 5px;;
+}
+
+.left .schedule-text .item-content{
+    display: flex;
+    flex-direction: column;
+}
+.left .schedule-text .item-content>a{
+    background: url(./images/schedule-tv.png) no-repeat;
+    padding-left: 50px;
+}
+
+.snsbtns{
+    width: 100%;
+    height: 85px;
+    border-radius: 10px;
+    background: url(./images/small/idxsnsbg.gif);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.snsbtns a{
+    position: absolute;
+}
+
+.snsbtns .b107{
+    top: 20px;
+    left: 110px;
+}
+.snsbtns .fb{
+    top: 20px;
+    left: 165px;
+}
+.snsbtns .mixi{
+    top: 50px;
+    left: 50px;
+}
+.snsbtns .twitter{
+    top: 50px;
+    left: 135px;
+}
+
+.online{
+    border:1px solid purple;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.online p {
+    background: url(./images/small/li.gif) no-repeat;
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.bnrs img{
+    margin-bottom: 5px;
+}
+
+.web a{
+    font-size: 12px;
+    color:#2b7bb9;
+    text-decoration: none;
+}
+.web span:nth-child(2){
+    font-size: 12px;
+    color:#aaa;
+}
+
+.web h2:nth-child(1){
+    color:#000;
+    font-weight: 500;
+}
+
+.web p{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.web p a{
+    font-size: 12px;
+    color:#2b7bb9;
+    text-decoration: none;
+}
+
+footer{
+    width: 100%;
+    background-color: #7e1083;
+    padding: 20px 0 10px;
+}
+
+footer .container{
+    position: relative;
+}
+
+.link{
+    padding-bottom: 40px;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link a{
+    display: block;
+    height: 30px;
+}
+
+footer .nav-link .doko{
+    background: url(./images/footer.gif) no-repeat;
+    background-position: 0 0;
+    width: 125px;
+}
+footer .nav-link .producer{
+    background: url(./images/footer.gif) no-repeat;
+    background-position: -125px 0;
+    width: 110px;
+}
+footer .nav-link .faq{
+    background: url(./images/footer.gif) no-repeat;
+    background-position: -235px 0;
+    width: 63px;
+}
+footer .nav-link .ask{
+    background: url(./images/footer.gif) no-repeat;
+    background-position: -300px 0;
+    width: 100px;
+}
+
+.sns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns a{
+    display: block;
+    height: 30px;
+    width: 158px;
+}
+
+footer .sns .idol{
+    background: url(./images/footer.gif) -558px 0 no-repeat;
+}
+footer .sns .twitter{
+    background: url(./images/footer.gif) -401px 0 no-repeat;
+}
+footer .sns .fb{
+    background: url(./images/footer.gif) -126px -28px no-repeat;
+}
+
+footer .link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .link::after{
+    content:'©乃木坂46LLC';
+    display: block;
+    color:#ccc;
+    font-size: 12px;
+}
+
+.footjasrac{
+    background: url(./images/small/jasrac.jpg) no-repeat;
+}
+
+.footjasrac p{
+    font-size: 12px;
+    padding-left:50px;
+    color:#ccc;
+}
+
+.ptop{
+    position: absolute;
+    right:0;
+    top: -40px;
+    background-color: #7e1083;
+}
+.ptop a{
+    display: block;
+    width: 116px;
+    height: 20px;
+    background: url(./images/footer.gif) 0 -30px no-repeat;
 }
