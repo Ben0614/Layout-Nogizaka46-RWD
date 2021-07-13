@@ -24,7 +24,7 @@ li{
 .flex-coulmn{
     flex-direction: column;
 }
-
+/* 語言選擇框 */
 .lang-selector{
     position:fixed;
     right:15px;
@@ -76,7 +76,7 @@ li{
     width: 100%;
     height: 100%;
 }
-
+/* navbar的樣式 */
 .nav li .m1{
     background: url(./images/_menu.gif) 0 0 no-repeat;
     background-position: 0 0;
@@ -172,6 +172,7 @@ right:10px;
     background: url(./images/idxbanner_interface.png);
 }
 
+/* 輪播整體定位 */
 .circle-wrap{
     position: absolute;
     top:271px;
@@ -190,11 +191,13 @@ right:10px;
     left: 7px;
 }
 
+/* 輪播選單的共同大小 */
 .circle{
     width: 15px;
     height: 15px;
 }
 
+/* 輪播選單 */
 .circle1{
     position: absolute;
     background: url(./images/idxbanner_interface.png);
@@ -306,6 +309,7 @@ right:10px;
     height: 100%;
 }
 
+/* 橫條news */
 .news-tag{
     display: flex;
     position: relative;
@@ -314,13 +318,13 @@ right:10px;
     padding:10px;
     border-radius: 5px;
 }
-
+/* 橫條news的新着情報背景圖 */
 .news-tag .title{
     width: 520px;
     height: 20px;
     background: url(./images/h2idxnews.png);
 }
-
+/* 橫條news的MORE背景圖 */
 .news-tag .more a {
     width: 100px;
     height: 20px;
@@ -352,7 +356,7 @@ right:10px;
     color:#e2347a;
     text-decoration: none;
 }
-
+/* 日期後面的粉色三角形 */
 .news-text .item-content::before{
     content:'';
     position: absolute;
@@ -362,7 +366,7 @@ right:10px;
     left: 10px;
     background: url(./images/schedule-handshake.png) no-repeat;
 }
-
+/* 橫條schedule */
 .schedule-tag{
     position: relative;
     display: flex;
@@ -372,16 +376,13 @@ right:10px;
     border-radius: 5px;
 }
 
-.schedule-tag .more:hover a {
-    opacity: .8;
-}
-
+/* 橫條schedule的本日のスケジュール背景圖 */
 .schedule-tag .title{
     width: 520px;
     height: 20px;
     background: url(./images/schedule.png) no-repeat;
 }
-
+/* 橫條schedule的MORE背景圖 */
 .schedule-tag .more a {
     width: 100px;
     height: 20px;
@@ -390,29 +391,33 @@ right:10px;
     background:url(./images/more1.png);
 }
 
-.right .schedule-text{
+.schedule-tag .more:hover a {
+    opacity: .8;
+}
+
+.right .schedule-content{
     font-size: 12px;
     color:#2d2d2d;
     padding:15px;
 }
-.right .schedule-text .item{
+.right .schedule-content .item{
     display: flex;
     padding-bottom: 15px;;
 }
-
-.right .schedule-text .item-content{
+/* schedule內容區域 */
+.right .schedule-content .item-text{
     display: flex;
     flex-direction: column;
     padding-left:60px;
     position: relative;
 }
 
-.schedule-text .item-content:hover a{
+.schedule-content .item-text:hover a{
     color:#e2347a;
     text-decoration: none;
 }
-
-.right .schedule-text .item-content::before{
+/* 日期後方的紫色三角形TV */
+.right .schedule-content .item-text::before{
     content:'';
     position: absolute;
     width: 50px;
@@ -421,7 +426,7 @@ right:10px;
     left: 10px;
     background: url(./images/schedule-tv.png) no-repeat;
 }
-
+/* 部落格和影片區 */
 .blog-video{
     width: 100%;
     display: flex;
@@ -430,7 +435,7 @@ right:10px;
 .blog{
     width: calc(55% - 5px);
 }
-
+/* 橫條blog */
 .blog-tag{
     position: relative;
     display: flex;
@@ -439,13 +444,13 @@ right:10px;
     padding:10px;
     border-radius: 5px 5px 0 0;
 }
-
+/* blog的公式ブログ背景圖 */
 .blog-tag .title{
     width: 80%;
     height: 20px;
     background: url(./images/h2idxblog.png) no-repeat;
 }
-
+/* blog的MORE背景圖 */
 .blog-tag .more a {
     width: 100px;
     height: 20px;
@@ -457,7 +462,7 @@ right:10px;
 .blog-tag .more:hover a {
     opacity: .8;
 }
-
+/* blog內容區域 */
 .blog .item{
     display: flex;
     padding:10px;
@@ -483,7 +488,7 @@ right:10px;
     font-size: 12px;
     margin-left: 5px;
 }
-
+/* 部落格標題與上邊的距離 */
 .blog .item .text .title{
     margin-top: 10px;
 }
@@ -506,7 +511,7 @@ right:10px;
 .video{
     width: calc(45% - 5px);
 }
-
+/* 橫條video */
 .video-tag{
     position: relative;
     display: flex;
@@ -515,13 +520,14 @@ right:10px;
     padding:10px;
     border-radius: 5px 5px 0 0;
 }
-
+/* video的動画背景圖 */
 .video-tag .title{
     width: 60%;
     height: 20px;
     background: url(./images/h2idxvideo.png) no-repeat;
 }
 
+/* video的MORE背景圖 */
  .video-tag .more a {
     width: 100px;
     height: 20px;
@@ -544,7 +550,7 @@ right:10px;
 .video .item-group .item{
     margin-bottom: 10px;
 }
-
+/* 最底下的三個連結 */
 .video .item-group .extra{
     display: flex;
     flex-direction: column;
@@ -555,32 +561,32 @@ right:10px;
     padding-top: 10px;
 }
 
+/* 左側上方的閱歷和行事曆 */
 .calendar-schedule{
     border:1px solid purple;
-    border-radius: 0 0 10px 10px;
-    overflow: hidden;
     margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
 }
-
+/* 橫條的背景色 */
 .calendar-schedule .calendar-tag{
     display: flex;
     justify-content: space-between;
     background: url(./images/pattern.jpg);
     padding:10px;
-    border-radius: 5px 5px 0 0;
 }
-
+/* 橫條的活動カレンダー背景圖 */
 .calendar-schedule .calendar-tag .title{
     width: 520px;
     height: 20px;
-    background: url(./images/schedule.png) no-repeat;
+    background: url(./images/h2calendarmodule.png) no-repeat;
 }
 
 .calendar-main {
     padding-bottom: 10px;
     background-color: #fff;
 }
-
+/* 標題年月 */
 .calendar-main .calendar-title{
     display: flex;
     justify-content: space-between;
@@ -624,20 +630,20 @@ right:10px;
     color:#e2347a;
     text-decoration: none;
 }
-
+/* 月曆表格區域 */
 .calendar-main .calendar-bd{
     font-size: 14px;
     padding:5px 10px;
     text-align: center;
 }
-
+/* 表格置中 */
 .calendar-bd{
     display: flex;
     justify-content: center;
 } 
 
 .calendar-bd table{
-    /* 消除表格框線的縫 */
+    /* 消除表格框線之間的縫 */
     border-collapse: collapse;
 }
 
@@ -664,13 +670,14 @@ right:10px;
 .calendar-bd table tbody td span{
     display: block;
 }
-
+/* 每格日期的數字區 */
 .calendar-bd table tbody td span:nth-child(1){
     padding-bottom: 5px;
     color: #000;
 }
-
+/* 每格日期的三角形區 */
 .calendar-bd table tbody td span:nth-child(2){
+    /* 設定長寬，讓表格不會被撐開到超出範圍 */
     width: 35px;
     height: 30px;  
     display: flex;
@@ -684,6 +691,8 @@ right:10px;
     height: 10px;
 }
 
+/* 行事曆區 */
+/* 頭部 */
 .schedule-main .schedule-title{
     display: flex;
     justify-content: space-between;
@@ -692,42 +701,43 @@ right:10px;
     border-bottom: 1px dashed purple;
     background-color: #f3e9f5;
 }
-
+/* 標題 */
 .schedule-main .schedule-title h4{
     color:purple;
     font-size: 12px;
 }
 
-.schedule-main .schedule-text{
+.schedule-main .schedule-content{
     background-color: #f3e9f5;
 }
 
-.schedule-main .schedule-text .item-content a{
+.schedule-main .schedule-content .item-text a{
     font-size: 12px;
     color:#2d2d2d;
     line-height: 2;
 }
 
-.left .schedule-text{
+.left .schedule-content{
     font-size: 12px;
     color:#2d2d2d;
     padding:15px;
 }
-.left .schedule-text .item{
+
+.left .schedule-content .item{
     display: flex;
     padding-bottom: 5px;;
 }
-
-.left .schedule-text .item-content{
+/* 三角和文字水平對齊 */
+.left .schedule-content .item-text{
     display: flex;
-    flex-direction: column;
 }
-.left .schedule-text .item-content>a{
+/* 空出位置給紫色三角TV  */
+.left .schedule-content .item-text>a{
     position: relative;
     padding-left: 50px;
 }
-
-.left .schedule-text .item-content>a::after{
+/* 紫色三角TV */
+.left .schedule-content .item-text>a::after{
     content:'';
     position: absolute;
     background: url(./images/schedule-tv.png) no-repeat;
@@ -736,7 +746,7 @@ right:10px;
     top: 5px;
     left: 0;
 }
-
+/* 社群區域 */
 .snsbtns{
     width: 100%;
     height: 85px;
@@ -784,7 +794,7 @@ right:10px;
     color:#e2347a;
     text-decoration: none;
 }
-
+/* 節目與廣播連結區 */
 .bnrs img{
     margin-bottom: 5px;
     border:1px solid #ead7ed;
@@ -793,7 +803,7 @@ right:10px;
 .bnrs img:hover{
     border:1px solid transparent;
 }
-
+/* 左下teitter連結區 */
 .web a{
     font-size: 12px;
     color:#2b7bb9;
@@ -844,10 +854,21 @@ footer .container{
     position: relative;
 }
 
-.link{
+
+footer .link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: 40px;
 }
-
+/* copyright */
+footer .link::after{
+    content:'©乃木坂46LLC';
+    display: block;
+    color:#ccc;
+    font-size: 12px;
+}
+/* footer上排 */
 .nav-link{
     display: flex;
     justify-content: space-between;
@@ -857,7 +878,7 @@ footer .container{
     display: block;
     height: 30px;
 }
-
+/* 精靈圖左一到四 */
 footer .nav-link .doko{
     background: url(./images/footer.gif) no-repeat;
     background-position: 0 0;
@@ -889,7 +910,7 @@ footer .nav-link .ask{
     height: 30px;
     width: 158px;
 }
-
+/* 精靈圖左五到六 */
 footer .sns .idol{
     background: url(./images/footer.gif) -558px 0 no-repeat;
 }
@@ -900,18 +921,6 @@ footer .sns .fb{
     background: url(./images/footer.gif) -126px -28px no-repeat;
 }
 
-footer .link{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer .link::after{
-    content:'©乃木坂46LLC';
-    display: block;
-    color:#ccc;
-    font-size: 12px;
-}
 
 .footjasrac{
     background: url(./images/small/jasrac.jpg) no-repeat;
@@ -922,7 +931,7 @@ footer .link::after{
     padding-left:50px;
     color:#ccc;
 }
-
+/* 返回頂部 */
 .ptop{
     position: absolute;
     right:0;
