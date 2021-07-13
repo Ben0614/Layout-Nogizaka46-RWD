@@ -157,15 +157,16 @@ right:10px;
     padding-top: 7px;
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 .right{
-    width: 70%;
+    width: calc(70% - 5px);
     order:1
 }
 
 .left{
-    width: 30%;
+    width: calc(30% - 5px);
     order:0;
 }
 
@@ -317,7 +318,7 @@ right:10px;
 .blog-tag{
     display: flex;
     justify-content: space-between;
-    background: url(./images/pattern.jpg);
+    background-color: #812990;
     padding:10px;
     border-radius: 5px 5px 0 0;
 }
@@ -392,7 +393,7 @@ right:10px;
 .video-tag{
     display: flex;
     justify-content: space-between;
-    background: url(./images/pattern.jpg);
+    background-color: #812990;
     padding:10px;
     border-radius: 5px 5px 0 0;
 }
@@ -439,4 +440,75 @@ right:10px;
 }
 .video .item-group .extra p{
     padding-top: 10px;
+}
+
+.calendar-schedule .calendar-tag{
+    display: flex;
+    justify-content: space-between;
+    background: url(./images/pattern.jpg);
+    padding:10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.calendar-schedule .calendar-tag .title{
+    width: 520px;
+    height: 20px;
+    background: url(./images/schedule.png) no-repeat;
+}
+
+.calendar-main .calendar-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.last-month{
+    border: none;
+    background-color: transparent;
+    color: purple;
+    text-decoration: purple;
+    text-decoration-line:underline;
+}
+
+.the-month{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.the-month span{
+    margin-left: 5px;
+    font-size: 50px;
+}
+.next-month{
+    border: none;
+    background-color: transparent;
+    color: purple;
+    text-decoration: purple;
+    text-decoration-line:underline;
+}
+
+.calendar-main .calendar-bd{
+    font-size: 14px;
+    padding:5px 10px;
+    text-align: center;
+}
+
+.calendar-bd{
+    display: flex;
+    justify-content: center;
+} 
+
+.calendar-bd table{
+    /* 消除表格框線的縫 */
+    border-collapse: collapse;
+}
+
+.calendar-bd table tbody td{
+    border:1px solid #ccc;
+    padding: 5px 11px
+}
+
+.calendar-bd table tbody td span{
+    display: block;
 }
