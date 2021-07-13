@@ -31,6 +31,8 @@ li{
     bottom: 15px;
     width: 140px;
     height: 53px;
+    border-radius: 7px;
+    overflow: hidden; 
 }
 .lang-selector img{
     width: 100%;
@@ -63,28 +65,54 @@ li{
 .nav li{
     width: 105px;
     height: 46px;
-    border: 1px solid #000;
-    overflow: hidden;
 }
+
+.nav li:hover{
+    opacity: 0.8;
+}
+
 .nav li a{
     display: block;
     width: 100%;
     height: 100%;
-    background-color: purple;
-    color: #fff;
-    font-size: 500;
-    text-align: center;
-    font-size: 14px;
-    line-height: 46px;
-    text-decoration: none;
 }
-/* border-radius: 10px; */
 
-.nav li:first-child{
-    border-radius: 5px 0 0 5px;
+.nav li .m1{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: 0 0;
 }
-.nav li:last-child{
-    border-radius: 0 5px 5px 0;
+.nav li .m2{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -105px 0;
+}
+.nav li .m3{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -210px 0;
+}
+.nav li .m4{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -315px 0;
+}
+.nav li .m5{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -420px 0;
+}
+.nav li .m6{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -525px 0;
+}
+.nav li .m7{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -630px 0;
+}
+.nav li .m8{
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -735px 0;
+}
+.nav li .m9{
+    width: 110px;
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -840px 0;
 }
 
 .banner{
@@ -144,6 +172,86 @@ right:10px;
     background: url(./images/idxbanner_interface.png);
 }
 
+.circle-wrap{
+    position: absolute;
+    top:271px;
+    left:601px;
+    width: 155px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.circle-group{
+    position: absolute;
+    background-color: #fff;
+    width: 141px;
+    height: 25px;
+    left: 7px;
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+}
+
+.circle1{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: 0 -176px;
+    top:6px;
+    left:0;
+}
+.circle2{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: -15px -176px;
+    top:6px;
+    left:18px;
+}
+.circle3{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: -30px -176px;
+    top:6px;
+    left:36px;
+}
+.circle4{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: -45px -176px;
+    top:6px;
+    left:54px;
+}
+.circle5{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: -60px -176px;
+    top:6px;
+    left:72px;
+}
+.circle6{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: -75px -176px;
+    top:6px;
+    left:90px;
+}
+.circle7{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: -90px -176px;
+    top:6px;
+    left:108px;
+}
+.circle8{
+    position: absolute;
+    background: url(./images/idxbanner_interface.png);
+    background-position: -105px -176px;
+    top:6px;
+    left:126px;
+}
+
 .center-text{
     display: flex;
     flex-direction: column;
@@ -160,6 +268,10 @@ right:10px;
 .center-text p a {
     font-size: 12px;
     color:#e2437a
+}
+
+.center-text p:hover a {
+    text-decoration: none;
 }
 
 .center-text p:nth-child(2){
@@ -181,6 +293,7 @@ right:10px;
 .left{
     width: calc(30% - 5px);
     order:0;
+    margin-bottom: 50px;
 }
 
 .nogikoi{
@@ -195,6 +308,7 @@ right:10px;
 
 .news-tag{
     display: flex;
+    position: relative;
     justify-content: space-between;
     background: url(./images/pattern.jpg);
     padding:10px;
@@ -208,20 +322,14 @@ right:10px;
 }
 
 .news-tag .more a {
-    padding-right: 20px;
-    color:#fff;
-    position: relative;
-    font-size: 12px;
-}
-
-.news-tag .more a::after{
-    content:'';
+    width: 100px;
+    height: 20px;
     position: absolute;
-    width: 10px;
-    height: 10px;
-    bottom: 0;
     right: 3px;
-    background: url(./images/schedule-release.png) no-repeat;
+    background:url(./images/more1.png) ;
+}
+.news-tag .more:hover a {
+    opacity: .8;
 }
 
 .news-text{
@@ -240,6 +348,10 @@ right:10px;
     padding-left:25px;
     position: relative;
 }
+.news-text .item-content:hover a{
+    color:#e2347a;
+    text-decoration: none;
+}
 
 .news-text .item-content::before{
     content:'';
@@ -252,11 +364,16 @@ right:10px;
 }
 
 .schedule-tag{
+    position: relative;
     display: flex;
     justify-content: space-between;
     background: url(./images/pattern.jpg);
     padding:10px;
     border-radius: 5px;
+}
+
+.schedule-tag .more:hover a {
+    opacity: .8;
 }
 
 .schedule-tag .title{
@@ -266,20 +383,11 @@ right:10px;
 }
 
 .schedule-tag .more a {
-    padding-right: 20px;
-    color:#fff;
-    position: relative;
-    font-size: 12px;
-}
-
-.schedule-tag .more a::after{
-    content:'';
+    width: 100px;
+    height: 20px;
     position: absolute;
-    width: 10px;
-    height: 10px;
-    bottom: 0;
     right: 3px;
-    background: url(./images/schedule-release.png) no-repeat;
+    background:url(./images/more1.png);
 }
 
 .right .schedule-text{
@@ -295,28 +403,23 @@ right:10px;
 .right .schedule-text .item-content{
     display: flex;
     flex-direction: column;
-    padding-left:70px;
+    padding-left:60px;
     position: relative;
+}
+
+.schedule-text .item-content:hover a{
+    color:#e2347a;
+    text-decoration: none;
 }
 
 .right .schedule-text .item-content::before{
     content:'';
     position: absolute;
-    width: 20px;
+    width: 50px;
     height: 20px;
     top: 3px;
     left: 10px;
     background: url(./images/schedule-tv.png) no-repeat;
-}
-
-.right .schedule-text .item-content::after{
-    content:'TV';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 2px;
-    left: 25px;
-   color:purple;
 }
 
 .blog-video{
@@ -329,6 +432,7 @@ right:10px;
 }
 
 .blog-tag{
+    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: #812990;
@@ -343,20 +447,15 @@ right:10px;
 }
 
 .blog-tag .more a {
-    padding-right: 20px;
-    color:#fff;
-    position: relative;
-    font-size: 12px;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right: 3px;
+    background:url(./images/more2.png);
 }
 
-.blog-tag .more a::after{
-    content:'';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    bottom: 0;
-    right: 3px;
-    background: url(./images/schedule-release.png) no-repeat;
+.blog-tag .more:hover a {
+    opacity: .8;
 }
 
 .blog .item{
@@ -399,11 +498,17 @@ right:10px;
     color: purple
 }
 
+.blog .item .text:hover a{
+    color:#e2347a;
+    text-decoration: none;
+}
+
 .video{
     width: calc(45% - 5px);
 }
 
 .video-tag{
+    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: #812990;
@@ -418,20 +523,15 @@ right:10px;
 }
 
  .video-tag .more a {
-    padding-right: 20px;
-    color:#fff;
-    position: relative;
-    font-size: 12px;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right: 3px;
+    background:url(./images/more2.png);
 } 
 
-.video-tag .more a::after{
-    content:'';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    bottom: 0;
-    right: 3px;
-    background: url(./images/schedule-release.png) no-repeat;
+.video-tag .more:hover a {
+    opacity: .8;
 }
 
 .video .item-group{
@@ -494,6 +594,12 @@ right:10px;
     color: purple;
     text-decoration: purple;
     text-decoration-line:underline;
+    font-size: 12px;
+}
+
+.last-month:hover{
+    color:#e2347a;
+    text-decoration: none;
 }
 
 .the-month{
@@ -511,6 +617,12 @@ right:10px;
     color: purple;
     text-decoration: purple;
     text-decoration-line:underline;
+    font-size: 12px;
+}
+
+.next-month:hover{
+    color:#e2347a;
+    text-decoration: none;
 }
 
 .calendar-main .calendar-bd{
@@ -529,13 +641,47 @@ right:10px;
     border-collapse: collapse;
 }
 
+.calendar-bd table th{
+    font-weight: 500;
+}
+
+.calendar-bd table .sun{
+    color:red;
+}
+
 .calendar-bd table tbody td{
     border:1px solid #ccc;
-    padding: 5px 11px
+}
+
+.calendar-bd table tbody td:hover{
+    border:3px solid #e2347a;
+}
+
+.calendar-bd table tbody td a{
+    text-decoration: none;
 }
 
 .calendar-bd table tbody td span{
     display: block;
+}
+
+.calendar-bd table tbody td span:nth-child(1){
+    padding-bottom: 5px;
+    color: #000;
+}
+
+.calendar-bd table tbody td span:nth-child(2){
+    width: 35px;
+    height: 30px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.calendar-bd table tbody td span img{
+    width: 10px;
+    height: 10px;
 }
 
 .schedule-main .schedule-title{
@@ -577,8 +723,18 @@ right:10px;
     flex-direction: column;
 }
 .left .schedule-text .item-content>a{
-    background: url(./images/schedule-tv.png) no-repeat;
+    position: relative;
     padding-left: 50px;
+}
+
+.left .schedule-text .item-content>a::after{
+    content:'';
+    position: absolute;
+    background: url(./images/schedule-tv.png) no-repeat;
+    width: 35px;
+    height: 14px;
+    top: 5px;
+    left: 0;
 }
 
 .snsbtns{
@@ -624,8 +780,18 @@ right:10px;
     font-size: 12px;
 }
 
+.online p:hover a{
+    color:#e2347a;
+    text-decoration: none;
+}
+
 .bnrs img{
     margin-bottom: 5px;
+    border:1px solid #ead7ed;
+    border-radius: 5px;;
+}
+.bnrs img:hover{
+    border:1px solid transparent;
 }
 
 .web a{
@@ -633,6 +799,11 @@ right:10px;
     color:#2b7bb9;
     text-decoration: none;
 }
+
+.web h2{
+    border-bottom: 1px solid #ccc;
+}
+
 .web span:nth-child(2){
     font-size: 12px;
     color:#aaa;
@@ -653,6 +824,14 @@ right:10px;
     font-size: 12px;
     color:#2b7bb9;
     text-decoration: none;
+}
+
+.web p .ume:hover{
+    opacity: .5;
+}
+
+.web p .tw:hover{
+    opacity: .5;
 }
 
 footer{
