@@ -661,7 +661,7 @@ right:10px;
 }
 
 .calendar-bd table tbody td:hover{
-    border:3px solid #e2347a;
+    outline:3px solid #e2347a;
 }
 
 .calendar-bd table tbody td a{
