@@ -551,6 +551,14 @@ right:10px;
 .video .item-group .item{
     margin-bottom: 10px;
 }
+
+.video .item-group .item>p{
+    padding-bottom: 5px;
+}
+.video .item-group .item>p a{
+    text-decoration: none;
+}
+
 /* 最底下的三個連結 */
 .video .item-group .extra{
     display: flex;
@@ -559,7 +567,7 @@ right:10px;
     align-items: center;
 }
 .video .item-group .extra p{
-    padding-top: 10px;
+    padding: 10px 0 5px 0;
 }
 
 /* 左側上方的閱歷和行事曆 */
