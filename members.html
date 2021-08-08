@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./members.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>members</title>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!-- 語言選擇框 -->
+        <div class="lang-selector">
+            <a href="#"><img src="./images/Snipaste_2021-07-13_16-11-23.png" alt=""></a>
+        </div>
+
+        <div class="container w1010">
+            <!-- 頭部區域 -->
+            <div class="header ">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./images/logo.gif" alt="">
+                    </a>
+                </div>
+                <!-- 漢堡選單 -->
+                <div class="hum d-lg-none">
+                    <i class="fas fa-bars">
+                        <ul class="nav">
+                            <li><a href="#" class="m1"></a></li>
+                            <li><a href="#" class="m2"></a></li>
+                            <li><a href="#" class="m3"></a></li>
+                            <li><a href="#" class="m4"></a></li>
+                            <li><a href="#" class="m5"></a></li>
+                            <li><a href="#" class="m6"></a></li>
+                            <li><a href="#" class="m7"></a></li>
+                            <li><a href="#" class="m8"></a></li>
+                            <li><a href="#" class="m9"></a></li>
+                        </ul>
+                    </i>
+                </div>
+                <!-- navbar -->
+                <!-- 桌機 -->
+                <ul class="nav d-none d-lg-flex justify-content-lg-center">
+                    <li><a href="#" class="m1"></a></li>
+                    <li><a href="#" class="m2"></a></li>
+                    <!-- 現在在成員頁面，讓navbar的按鈕變色 -->
+                    <li><a href="#" class="m3 opacity-7"></a></li>
+                    <li><a href="#" class="m4"></a></li>
+                    <li><a href="#" class="m5"></a></li>
+                    <li><a href="#" class="m6"></a></li>
+                    <li><a href="#" class="m7"></a></li>
+                    <li><a href="#" class="m8"></a></li>
+                    <li><a href="#" class="m9"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container w1010 mb-5">
+            <div class="main">
+                <!-- 桌機 成員介紹橫幅 -->
+                <div class="introduce d-none d-lg-block">
+                    <img src="./images/members/h1member.gif" alt="">
+                </div>
+
+                <!-- 手機 成員介紹橫幅 (因為圖片尺寸問題，所以手機用文字和背景自己製作) -->
+                <div class="introduce d-block d-lg-none">
+                    <p>メンバー紹介<span>MEMBER</span></p>
+                </div>
+
+                <!-- 主要內容區 分為左右兩區 -->
+                <div class="content">
+                    <!-- 左區 -->
+                    <div class="left">
+                        <!-- 社群連結 -->
+                        <div class="snsbtns">
+                            <a href="#" class="b107"><img src="./images/small/Snipaste_2021-07-13_14-00-23.png"
+                                    alt=""></a>
+                            <a href="#" class="fb"><img src="./images/small/Snipaste_2021-07-13_14-00-56.png"
+                                    alt=""></a>
+                            <a href="#" class="mixi"><img src="./images/small/Snipaste_2021-07-13_14-01-37.png"
+                                    alt=""></a>
+                            <a href="#" class="twitter"><img src="./images/small/Snipaste_2021-07-13_14-01-48.png"
+                                    alt=""></a>
+                        </div>
+
+                        <!-- 手機 -->
+                        <!-- 成員排序選擇條 -->
+                        <!-- 用sort和search包起來，垂直排列成兩條 -->
+                        <div class="select-bar d-flex d-lg-none">
+                            <div class="sort">
+                                <p>並べかえ</p>
+                                <select name="" id="sort">
+                                    <option value="">▼選んでください</option>
+                                    <option value="">・50音</option>
+                                    <option value="">・生年月日</option>
+                                    <option value="">・血液型</option>
+                                    <option value="">・星座</option>
+                                </select>
+                            </div>
+                            <div class="search">
+                                <p>絞り込み</p>
+                                <select name="" id="search">
+                                    <option value="">▼選んでください</option>
+                                    <option value="">・選抜メンバー（50音順）</option>
+                                    <option value="">・十二福神（50音順）</option>
+                                    <option value="">・アンダー</option>
+                                    <option value="">・1期生</option>
+                                    <option value="">・2期生</option>
+                                    <option value="">・3期生</option>
+                                    <option value="">・4期生</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 桌機 -->
+                        <!-- 成員排序選擇條 -->
+                        <!-- 全部水平排列 -->
+                        <div class="select-bar d-none d-lg-flex">
+                            <p>並べかえ</p>
+                            <select name="" id="sort">
+                                <option value="">▼選んでください</option>
+                                <option value="">・50音</option>
+                                <option value="">・生年月日</option>
+                                <option value="">・血液型</option>
+                                <option value="">・星座</option>
+                            </select>
+                            <p>絞り込み</p>
+                            <select name="" id="search">
+                                <option value="">▼選んでください</option>
+                                <option value="">・選抜メンバー（50音順）</option>
+                                <option value="">・十二福神（50音順）</option>
+                                <option value="">・アンダー</option>
+                                <option value="">・1期生</option>
+                                <option value="">・2期生</option>
+                                <option value="">・3期生</option>
+                                <option value="">・4期生</option>
+                            </select>
+                        </div>
+
+                        <!-- 橫幅 -->
+                        <h2>50音順</h2>
+                        <!-- 上方的item-group -->
+                        <div class="senbai item-group">
+                            <div class="item">
+                                <a href="#">
+                                    <div class="manatsu"></div>
+                                    <p>秋元 真夏</p>
+                                    <p>あきもと まなつ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="erika"></div>
+                                    <p>生田 絵梨花</p>
+                                    <p>いくた えりか</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="zyuunnna"></div>
+                                    <p>伊藤 純奈</p>
+                                    <p>いとう じゅんな</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="riria"></div>
+                                    <p>伊藤 理々杏</p>
+                                    <p>いとう りりあ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="rennka"></div>
+                                    <p>岩本 蓮加</p>
+                                    <p>いわもと れんか</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="ume"></div>
+                                    <p>梅澤 美波</p>
+                                    <p>うめざわ みなみ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="momoko"></div>
+                                    <p>大園 桃子</p>
+                                    <p>おおぞの ももこ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="hinako"></div>
+                                    <p>北野 日奈子</p>
+                                    <p>きたの ひなこ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="shiori"></div>
+                                    <p>久保 史緒里</p>
+                                    <p>くぼ しおり</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="asuka"></div>
+                                    <p>齋藤 飛鳥</p>
+                                    <p>さいとう あすか</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="tamami"></div>
+                                    <p>阪口 珠美</p>
+                                    <p>さかぐち たまみ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="kaede"></div>
+                                    <p>佐藤 楓</p>
+                                    <p>さとう かえで</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="mai"></div>
+                                    <p>新内 眞衣</p>
+                                    <p>しんうち まい</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="ayane"></div>
+                                    <p>鈴木 絢音</p>
+                                    <p>すずき あやね</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="kazumi"></div>
+                                    <p>高山 一実</p>
+                                    <p>たかやま かずみ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="rannze"></div>
+                                    <p>寺田 蘭世</p>
+                                    <p>てらだ らんぜ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="reno"></div>
+                                    <p>中村 麗乃</p>
+                                    <p>なかむら れの</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="hina"></div>
+                                    <p>樋口 日奈</p>
+                                    <p>ひぐち ひな</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="minami"></div>
+                                    <p>星野 みなみ</p>
+                                    <p>ほしの みなみ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sayuri"></div>
+                                    <p>松村 沙友理</p>
+                                    <p>まつむら さゆり</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="hatsuki"></div>
+                                    <p>向井 葉月</p>
+                                    <p>むかい はづき</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="rena"></div>
+                                    <p>山崎 怜奈</p>
+                                    <p>やまざき れな</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="mizuki"></div>
+                                    <p>山下 美月</p>
+                                    <p>やました みづき</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="ayano"></div>
+                                    <p>吉田 綾乃クリスティー</p>
+                                    <p>よしだ あやのくりすてぃー</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="yuuki"></div>
+                                    <p>与田 祐希</p>
+                                    <p>よだ ゆうき</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="miria"></div>
+                                    <p>渡辺 みり愛</p>
+                                    <p>わたなべ みりあ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="maaya"></div>
+                                    <p>和田 まあや</p>
+                                    <p>わだ まあや</p>
+                                </a>
+                            </div>
+
+
+
+
+                        </div>
+
+                         <!-- 下方的item-group -->
+                        <h3>4期生</h3>
+                        <div class="gouhai item-group">
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sakura"></div>
+                                    <p>遠藤 さくら</p>
+                                    <p>えんどう さくら</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="kaki"></div>
+                                    <p>賀喜 遥香</p>
+                                    <p>かき はるか</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="sayaka"></div>
+                                    <p>掛橋 沙耶香</p>
+                                    <p>かけはし さやか</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="saya"></div>
+                                    <p>金川 紗耶</p>
+                                    <p>かながわ さや</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="yuri"></div>
+                                    <p>北川 悠理</p>
+                                    <p>きたがわ ゆり</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="haruka"></div>
+                                    <p>黒見 明香</p>
+                                    <p>くろみ はるか</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="rika"></div>
+                                    <p>佐藤 璃果</p>
+                                    <p>さとう りか</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="yuna"></div>
+                                    <p>柴田 柚菜</p>
+                                    <p>しばた ゆな</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="rei"></div>
+                                    <p>清宮 レイ</p>
+                                    <p>せいみや れい</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="mayu"></div>
+                                    <p>田村 真佑</p>
+                                    <p>たむら まゆ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="ayame"></div>
+                                    <p>筒井 あやめ</p>
+                                    <p>つつい あやめ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="seira"></div>
+                                    <p>早川 聖来</p>
+                                    <p>はやかわ せいら</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="runa"></div>
+                                    <p>林 瑠奈</p>
+                                    <p>はやし るな</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="miyu"></div>
+                                    <p>松尾 美佑</p>
+                                    <p>まつお みゆ</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="mio"></div>
+                                    <p>矢久保 美緒</p>
+                                    <p>やくぼ みお</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="nao"></div>
+                                    <p>弓木 奈於</p>
+                                    <p>ゆみき なお</p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 右區 -->
+                    <div class="right">
+                        <!-- 選拔成員連結 -->
+                        <div class="album-selection">
+                            <!-- 標題 -->
+                            <div class="title"></div>
+                            <div class="text">
+                                <p>
+                                    <a href="#">
+                                        26thシングル『僕は僕を好きになる』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        25thシングル『しあわせの保護色』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        24thシングル『夜明けまで強がらなくてもいい』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        23rdシングル『Sing Out！』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        22ndシングル『帰り道は遠回りしたくなる』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        21stシングル『ジコチューで行こう！』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        20thシングル『シンクロニシティ』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        19thシングル『いつかできるから今日できる』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        18thシングル『逃げ水』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        17thシングル『インフルエンサー』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        16thシングル『サヨナラの意味』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        15thシングル『裸足でSummer』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        14thシングル『ハルジオンが咲く頃』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        12thシングル『太陽ノック』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        11thシングル『命は美しい』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        10thシングル『何度目の青空か？』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        9thシングル『夏のFree&Easy』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        8thシングル『気づいたら片想い』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        7thシングル『バレッタ』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        6thシングル『ガールズルール』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        5thシングル『君の名は希望』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        4thシングル『制服のマネキン』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        3rdシングル『走れ！Bicycle』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        2ndシングル『おいでシャンプー』
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        1stシングル『ぐるぐるカーテン』
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- 動畫 -->
+                        <div class="video">
+                            <!-- 標題 -->
+                            <div class="video-tag">
+                                <div class="title"></div>
+                                <div class="more">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                            <!-- 動画 內容區 -->
+                            <div class="item-group">
+                                <div class="item">
+                                    <p><a href="https://www.youtube.com/watch?v=jddS5q0RFpY">『ごめんねFingers crossed』</a>
+                                    </p>
+                                    <!-- 用iframe嵌入youtube -->
+                                    <div>
+                                        <iframe width="270" height="158" src="https://www.youtube.com/embed/jddS5q0RFpY"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p><a href="https://www.youtube.com/watch?v=slgLdRkpLlU">『錆びたコンパス』</a></p>
+                                    <!-- 用iframe嵌入youtube -->
+                                    <div><iframe width="270" height="158"
+                                            src="https://www.youtube.com/embed/slgLdRkpLlU" title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p><a href="https://www.youtube.com/watch?v=wOx5oAbzKKs">『ざぶんざざぶん』</a></p>
+                                    <!-- 用iframe嵌入youtube -->
+                                    <div><iframe width="270" height="158"
+                                            src="https://www.youtube.com/embed/wOx5oAbzKKs" title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p><a href="https://www.youtube.com/watch?v=9RRwfblvlFg">『全部　夢のまま』</a></p>
+                                    <!-- 用iframe嵌入youtube -->
+                                    <div><iframe width="270" height="158"
+                                            src="https://www.youtube.com/embed/9RRwfblvlFg" title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p><a href="https://www.youtube.com/watch?v=gHtQlZgjnzU">『さ～ゆ～Ready？』</a></p>
+                                    <!-- 用iframe嵌入youtube -->
+                                    <div><iframe width="270" height="158"
+                                            src="https://www.youtube.com/embed/gHtQlZgjnzU" title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="extra">
+                                    <p><a href="#">MVをもっとみる</a></p>
+                                    <p><a href="#">LIVE 合いの手動画</a></p>
+                                    <p><a href="#">その他の動画はこちら</a></p>
+                                </div>
+                            </div>
+
+                            <!-- 各式節目與廣播連結 -->
+                            <div class="bnrs">
+                                <a href="#"><img src="./images/bnr100_n46llc.png" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_4thal.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr210621_nogidouga.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_seifukukorekuyon.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr102_nogifes.png" alt=""></a>
+                                <a href="#"><img src="./images/bnr101_nogikoi5.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_awy2020.png" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_kanashimi_3.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_nogizakakoujityuudvd.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_nogieigo201906.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_n46mobile.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_n46mail.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr100_shop.gif" alt=""></a>
+                                <a href="#"><img src="./images/bnr60_noginono.jpg" alt=""></a>
+                                <a href="#"><img src="./images/bnr60_offer.png" alt=""></a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 底部 -->
+        <footer>
+            <div class="container">
+                <div class="link">
+
+                    <!-- 桌機 -->
+                    <!-- 精靈圖 -->
+                    <div class="nav-link d-none d-lg-flex">
+                        <div><a href="#" class="doko"></a></div>
+                        <div><a href="#" class="producer"></a></div>
+                        <div><a href="#" class="faq"></a></div>
+                        <div><a href="#" class="ask"></a></div>
+                    </div>
+                    <!-- 精靈圖 -->
+                    <div class="sns  d-none d-lg-flex">
+                        <div><a href="#" class="idol"></a></div>
+                        <div><a href="#" class="twitter"></a></div>
+                        <div><a href="#" class="fb"></a></div>
+                    </div>
+
+                    <!-- 手機 -->
+                    <!-- 精靈圖 -->
+                    <div class="nav-link d-flex d-lg-none">
+                        <!-- front 和 back 是手機排版用 -->
+                        <div class="front">
+                            <div><a href="#" class="doko"></a></div>
+                            <div><a href="#" class="producer"></a></div>
+                        </div>
+                        <!-- front 和 back 是手機排版用 -->
+                        <div class="back">
+                            <div><a href="#" class="faq"></a></div>
+                            <div><a href="#" class="ask"></a></div>
+                        </div>
+                    </div>
+                    <!-- 精靈圖 -->
+                    <div class="sns d-flex d-lg-none">
+                        <!-- front是手機排版用 -->
+                        <div class="front">
+                            <div><a href="#" class="idol"></a></div>
+                            <div><a href="#" class=" twitter"></a></div>
+                        </div>
+                        <div><a href="#" class="fb"></a></div>
+                    </div>
+                </div>
+
+                <!-- 書本圖是bgc -->
+                <div class="footjasrac">
+                    <p>JASRAC許諾第9015545002Y38029号</p>
+                    <p>JASRAC許諾第9015545001Y45040号</p>
+                </div>
+                <!-- 返回頂部 -->
+                <div class="ptop">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./jquery-3.6.0/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            // 點擊漢堡選單，就讓navbar顯示
+            $('.hum').click(function () {
+                $('.hum .nav').stop().slideToggle(300);
+            })
+
+        })
+    </script>
+</body>
+
+</html>

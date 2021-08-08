@@ -33,6 +33,7 @@ img{
 .flex-coulmn{
     flex-direction: column;
 }
+
 /* 語言選擇框 */
 .lang-selector{
     position:fixed;
@@ -850,6 +851,7 @@ position: inherit;
     margin-bottom: 15px;
 }
 
+/* 讓youtube填滿 */
 iframe {
     width:100%;
     height:100%;
@@ -1176,11 +1178,11 @@ iframe {
 /* 節目與廣播連結區 */
 .bnrs img{
     margin-bottom: 5px;
-    border:1px solid #ead7ed;
+    border:2px solid #ead7ed;
     border-radius: 5px;;
 }
 .bnrs img:hover{
-    border:1px solid transparent;
+    border:2px solid transparent;
 }
 /* 左下teitter連結區 */
 .web a{

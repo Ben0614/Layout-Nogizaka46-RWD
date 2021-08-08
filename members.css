@@ -1,0 +1,978 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: purple;
+    text-decoration: underline;
+}
+
+.opacity-7{
+    opacity: 0.7;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 頂部背景圖 */
+.wrap {
+    background: #fff url(./images/bg.jpg) center 0 repeat-x;
+}
+
+.w1010 {
+    max-width: 1010px;
+}
+
+.flex-coulmn {
+    flex-direction: column;
+}
+
+/* 語言選擇框 */
+.lang-selector {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 140px;
+    height: 53px;
+    border-radius: 7px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.lang-selector img {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 280px;
+    height: 84px;
+}
+
+.logo a img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav li {
+    width: 105px;
+    height: 46px;
+}
+
+.nav li:hover {
+    opacity: 0.8;
+}
+
+.nav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* navbar的樣式 */
+.nav li .m1 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: 0 0;
+}
+
+.nav li .m2 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -105px 0;
+}
+
+.nav li .m3 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -210px 0;
+}
+
+.nav li .m4 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -315px 0;
+}
+
+.nav li .m5 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -420px 0;
+}
+
+.nav li .m6 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -525px 0;
+}
+
+.nav li .m7 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -630px 0;
+}
+
+.nav li .m8 {
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -735px 0;
+}
+
+.nav li .m9 {
+    width: 110px;
+    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background-position: -840px 0;
+}
+
+@media screen and (max-width:992px) {
+
+    /* 把navbar每個li都切成圓角，然後hidden */
+    .nav li {
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    /* 調整背景圖size */
+    .wrap {
+        background: #fff url(./images/bg.jpg) center 0 repeat-x;
+        background-size: 15%;
+    }
+
+    /* header添加flex，logo和hum左右對齊 */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* logo縮小 */
+    .logo {
+        width: 50%;
+        height: 50%;
+    }
+
+    /* 漢堡選單 */
+    .hum .fas {
+        position: relative;
+        font-size: 40px;
+        padding-right: 10px;
+        color: #812990;
+    }
+
+    /* 手機nav */
+    .hum .nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+        z-index: 100;
+    }
+}
+
+/* 漢堡選單尺寸調整 */
+@media screen and (max-width:768px) {
+    .hum .fas {
+        font-size: 36px;
+    }
+}
+
+/* 漢堡選單尺寸調整 */
+@media screen and (max-width:375px) {
+    .hum .fas {
+        font-size: 32px;
+    }
+}
+
+/* 成員介紹橫幅 */
+@media screen and (max-width:992px) {
+    .introduce {
+        background: linear-gradient(#e6d4e9, #fffeff);
+        padding: 10px;
+        border-radius: 5px;
+
+    }
+
+    .introduce p {
+        color: #9449a1;
+        font-weight: 700;
+    }
+
+    .introduce p span {
+        font-size: 10px;
+        padding-left: 5px;
+
+    }
+}
+
+/* 主要區域 */
+/* 設定白色背景和圓角 */
+.main {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+}
+
+/* 主要區域內容 */
+/* 分為左右兩區 */
+.main .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 左邊區域 */
+.main .content .left {
+    /* 使用calc - 的前後一定要有空格 */
+    width: calc(68% - 10px);
+}
+
+/* 右邊區域 */
+.main .content .right {
+    width: calc(32% - 10px);
+}
+
+@media screen and (max-width:992px) {
+    .main .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 要注意權重，如果只寫left或right，權重太小 */
+    .main .content .left {
+        width: 100%;
+    }
+
+    .main .content .right {
+        width: 100%;
+    }
+}
+
+/* sbs的連結 */
+.left .snsbtns {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+.left .snsbtns a {
+    padding-left: 5px;
+}
+
+/* 選擇排列條 */
+.select-bar {
+    display: flex;
+    background: url(./images/pattern.jpg);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* 第三個p的取間隔和線 */
+.select-bar p:nth-child(3) {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+}
+
+/* 用select的option來做 */
+#search,
+#sort {
+    outline: none;
+    height: 25px;
+    width: content;
+    margin-left: 10px
+}
+
+@media screen and (max-width:992px) {
+    .select-bar {
+        flex-direction: column;
+    }
+
+    .select-bar .sort {
+        margin-bottom: 5px;
+    }
+
+    #search,
+    #sort {
+        margin-left: 0;
+    }
+
+}
+
+/* 50音順 */
+.left h2 {
+    background-color: #e6d4e9;
+    color: #812990;
+    font-size: 18px;
+    border-bottom: 1px dashed #812990;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+
+}
+
+/* 成員照片姓名區 */
+.left .item-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* 每行5個人 */
+.left .item-group .item {
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+/* 用div的背景做圖片，，精靈圖，寬高寫死 */
+.left .item-group .item div {
+    width: 124px;
+    height: 150px;
+}
+
+.left .item-group .item a {
+    text-decoration: none;
+}
+
+/* 觸碰時改變字體顏色 */
+.left .item-group .item:hover p:nth-child(2) {
+    color: #7e1083;
+}
+
+/* 觸碰時加上outline */
+.left .item-group .item:hover div {
+    outline: 1px solid #7e1083;
+}
+
+/* 字體樣式 */
+.left .item-group .item p {
+    color: #e2437a;
+    font-size: 12px;
+    text-align: center;
+    /* 一行顯示 */
+    white-space: nowrap;
+    /* 超過的顯示... */
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* 第二行字體顏色 */
+.left .item-group .item p:nth-child(3) {
+    color: #aaa
+}
+
+@media screen and (max-width: 992px) {
+    .left .item-group .item {
+        display: flex;
+        justify-content: center;
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left .item-group .item {
+        width: 33.3333%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .left .item-group .item {
+        width: 50%;
+    }
+}
+
+/* -------------------senbai 精靈圖 start -------------------------*/
+.manatsu {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: 0 0;
+}
+
+.erika {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -124px 0;
+}
+
+.zyuunnna {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -4960px 0;
+}
+
+.riria {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -5456px 0;
+}
+
+.rennka {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -5580px 0;
+}
+
+.ume {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -5704px 0;
+}
+
+.momoko {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -5828px 0;
+}
+
+.hinako {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -3968px 0;
+}
+
+.shiori {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -5952px 0;
+}
+
+.asuka {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -1240px 0;
+}
+
+.tamami {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -6076px 0;
+}
+
+.kaede {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -6200px 0;
+}
+
+.mai {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -3844px 0;
+}
+
+.ayane {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -5084px 0;
+}
+
+.kazumi {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -1860px 0;
+}
+
+.rannze {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -4340px 0;
+}
+
+.reno {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -6324px 0;
+}
+
+.hina {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -2852px 0;
+}
+
+.minami {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -3100px 0;
+}
+
+.sayuri {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -3224px 0;
+}
+
+.hatsuki {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -6448px 0;
+}
+
+.rena {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -4836px 0;
+}
+
+.mizuki {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -6572px 0;
+}
+
+.ayano {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -6696px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.yuuki {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -6820px 0;
+}
+
+.miria {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -3720px 0;
+}
+
+.maaya {
+    background: url(./images/members/splite124x150.jpg) no-repeat;
+    background-position: -3596px 0;
+}
+
+/* -------------------senbai 精靈圖 end -------------------------*/
+
+/* 4期生標題 */
+h3 {
+    position: relative;
+    border-bottom: 2px solid #7e1083;
+    font-size: 18px;
+    padding: 0 0 5px 20px;
+    font-weight: 400;
+}
+
+/* 三角形 */
+h3::after {
+    content: '';
+    background: url(./images/members/mk-4ki.gif);
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+}
+
+/* -------------------gouhai 精靈圖 start -------------------------*/
+
+.sakura {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: 0 0;
+}
+
+.kaki {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -124px 0;
+}
+
+.sayaka {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -248px 0;
+}
+
+.saya {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -372px 0;
+}
+
+.yuri {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -496px 0;
+}
+
+.haruka {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -1364px 0;
+}
+
+.rika {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -1488px 0;
+}
+
+.yuna {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -620px 0;
+}
+
+.rei {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -744px 0;
+}
+
+.mayu {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -868px 0;
+}
+
+.ayame {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -992px 0;
+}
+
+.seira {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -1116px 0;
+}
+
+.runa {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -1612px 0;
+}
+
+.miyu {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -1736px 0;
+}
+
+.mio {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -1240px 0;
+}
+
+.nao {
+    background: url(./images/members/splite124x150-4ki.jpg) no-repeat;
+    background-position: -1860px 0;
+}
+
+/* -------------------gouhai 精靈圖 end -------------------------*/
+
+.right .album-selection {
+    border: 2px solid #ead7ed;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.right .album-selection .title {
+    height: 24px;
+    border-radius: 5px;
+    background: #812990 url(./images/members/h2kakomember.gif) 0 0 no-repeat;
+}
+
+.right .album-selection .text p a {
+    font-size: 12px;
+    color: #e2437a;
+
+}
+
+/* 用p來做圓形和padding，字體換行的時候才不會對其到圓形那裡 */
+.right .album-selection .text p {
+    position: relative;
+    padding-left: 15px;
+}
+
+
+.album-selection .text p:hover a {
+    color: #7e1083;
+}
+
+/* 用p來做圓形，字體換行的時候才不會對其到圓形那裡 */
+.album-selection .text p::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    background: url(./images/members/li2.gif);
+}
+
+@media screen and (max-width:992px) {
+    .right .album-selection {
+        width: 100%;
+        border: 2px solid #ead7ed;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+/* 橫條video */
+.video-tag {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #812990;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+/* video的動画背景圖 */
+.video-tag .title {
+    width: 60%;
+    height: 20px;
+    background: url(./images/h2idxvideo.png) no-repeat;
+}
+
+/* video的MORE背景圖 */
+.video-tag .more a {
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right: 3px;
+    background: url(./images/more2.png);
+}
+
+.video-tag .more:hover a {
+    opacity: .8;
+}
+
+.video .item-group {
+    padding: 10px 10px 0 10px;
+    border: 1px solid purple;
+    border-radius: 0 0 5px 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.video .item-group .item {
+    margin-bottom: 10px;
+}
+
+.video .item-group .item>p {
+    padding-bottom: 5px;
+}
+
+.video .item-group .item>p a {
+    text-decoration: none;
+}
+
+/* 最底下的三個連結 */
+.video .item-group .extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video .item-group .extra p {
+    padding: 10px 0 5px 0;
+}
+
+@media screen and (max-width:992px) {
+
+    /* blog和video也設定成column*/
+
+    .blog-video {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* blog和video 寬度100% */
+    .video {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* 讓youtube填滿 */
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+/* 節目與廣播連結區 */
+.bnrs img {
+    margin-bottom: 5px;
+    border: 2px solid #ead7ed;
+    border-radius: 5px;
+    ;
+}
+
+.bnrs img:hover {
+    border: 2px solid transparent;
+}
+
+@media screen and (max-width:992px) {
+
+    /* 讓位置置中 */
+    .bnrs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    /* 調整圖片大小 */
+    .bnrs img {
+        width: 760px;
+        height: 268px;
+        margin-bottom: 7px;
+    }
+
+    .web>a {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    /* 調整圖片大小 */
+    .bnrs img {
+        width: 570px;
+        height: 201px;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    /* 調整圖片大小 */
+    .bnrs img {
+        width: 370px;
+        height: 130px;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #7e1083;
+    padding: 20px 0 10px;
+}
+
+footer .container {
+    position: relative;
+}
+
+
+footer .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+/* copyright */
+footer .link::after {
+    content: '©乃木坂46LLC';
+    display: block;
+    color: #ccc;
+    font-size: 12px;
+}
+
+/* footer上排 */
+.nav-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link a {
+    display: block;
+    height: 30px;
+}
+
+/* 精靈圖左一到四 */
+footer .nav-link .doko {
+    background: url(./images/footer.gif) no-repeat;
+    background-position: 0 0;
+    width: 125px;
+}
+
+footer .nav-link .producer {
+    background: url(./images/footer.gif) no-repeat;
+    background-position: -125px 0;
+    width: 110px;
+}
+
+footer .nav-link .faq {
+    background: url(./images/footer.gif) no-repeat;
+    background-position: -235px 0;
+    width: 63px;
+}
+
+footer .nav-link .ask {
+    background: url(./images/footer.gif) no-repeat;
+    background-position: -300px 0;
+    width: 100px;
+}
+
+.sns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns a {
+    display: block;
+    height: 30px;
+    width: 158px;
+}
+
+/* 精靈圖左五到六 */
+footer .sns .idol {
+    background: url(./images/footer.gif) -126px -28px no-repeat;
+}
+
+footer .sns .twitter {
+    background: url(./images/footer.gif) -558px 0 no-repeat;
+}
+
+footer .sns .fb {
+    background: url(./images/footer.gif) -401px 0 no-repeat;
+}
+
+
+.footjasrac {
+    background: url(./images/small/jasrac.jpg) no-repeat;
+}
+
+.footjasrac p {
+    font-size: 12px;
+    padding-left: 50px;
+    color: #ccc;
+}
+
+/* 返回頂部 */
+.ptop {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    background-color: #7e1083;
+}
+
+.ptop a {
+    display: block;
+    width: 116px;
+    height: 20px;
+    background: url(./images/footer.gif) 0 -30px no-repeat;
+}
+
+@media screen and (max-width:992px) {
+
+    /* 讓link內的front和back上下排列 */
+    footer .link {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    /* 讓sns內的front和fb上面排列 */
+    footer .sns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 讓idol和twitter水平對齊 */
+    footer .sns .front {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    /* 調整 ©乃木坂46LLC 的間距 */
+    footer .link::after {
+        margin-top: 20px
+    }
+
+    /* 微調返回頭部的位置 */
+    .ptop {
+        top: -39px;
+
+    }
+
+}
