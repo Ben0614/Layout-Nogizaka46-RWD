@@ -227,35 +227,35 @@ img {
 
 /* 主要區域內容 */
 /* 分為左右兩區 */
-.main .content {
+.main .area {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 /* 左邊區域 */
-.main .content .left {
+.main .area .left {
     /* 使用calc - 的前後一定要有空格 */
     width: calc(68% - 10px);
 }
 
 /* 右邊區域 */
-.main .content .right {
+.main .area .right {
     width: calc(32% - 10px);
 }
 
 @media screen and (max-width:992px) {
-    .main .content {
+    .main .area {
         display: flex;
         flex-direction: column;
     }
 
     /* 要注意權重，如果只寫left或right，權重太小 */
-    .main .content .left {
+    .main .area .left {
         width: 100%;
     }
 
-    .main .content .right {
+    .main .area .right {
         width: 100%;
     }
 }
