@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +25,33 @@
         </div>
 
 
-        <div class="container">
+        <div class="container w1010">
             <!-- 頭部區域 -->
-            <div class="header">
+            <div class="header ">
                 <div class="logo">
                     <a href="#">
                         <img src="./images/logo.gif" alt="">
                     </a>
                 </div>
+                <!-- 漢堡選單 -->
+                <div class="hum d-lg-none">
+                    <i class="fas fa-bars">
+                        <ul class="nav">
+                            <li><a href="#" class="m1"></a></li>
+                            <li><a href="#" class="m2"></a></li>
+                            <li><a href="#" class="m3"></a></li>
+                            <li><a href="#" class="m4"></a></li>
+                            <li><a href="#" class="m5"></a></li>
+                            <li><a href="#" class="m6"></a></li>
+                            <li><a href="#" class="m7"></a></li>
+                            <li><a href="#" class="m8"></a></li>
+                            <li><a href="#" class="m9"></a></li>
+                        </ul>
+                    </i>
+                </div>
                 <!-- navbar -->
-                <ul class="nav">
+                <!-- 桌機 -->
+                <ul class="nav d-none d-lg-flex justify-content-lg-center">
                     <li><a href="#" class="m1"></a></li>
                     <li><a href="#" class="m2"></a></li>
                     <li><a href="#" class="m3"></a></li>
@@ -44,24 +64,86 @@
                 </ul>
             </div>
 
-            <!-- 橫幅 -->
-            <div class="banner">
-                <img src="./images/banner331.jpg" alt="">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <!-- 桌機的小圖和circles -->
+                <div class="small-pic-circle d-none d-lg-flex">
+                    <div class="small-pic">
+                        <a href="#">
+                            <!-- 三張小圖，用背景做 -->
+                            <div class="first">
+                                <!-- 小圖的邊框，用背景做 -->
+                                <div class="pic-border"></div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="second">
+                                <div class="pic-border"></div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="third">
+                                <div class="pic-border"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 輪播按鈕 -->
+                    <!-- 用absolute定位 -->
+                    <div class="circle-wrap">
+                        <div class="circle-group">
+                            <a href="#" class="circle circle1"></a>
+                            <a href="#" class="circle circle2"></a>
+                            <a href="#" class="circle circle3"></a>
+                            <a href="#" class="circle circle4"></a>
+                            <a href="#" class="circle circle5"></a>
+                            <a href="#" class="circle circle6"></a>
+                            <a href="#" class="circle circle7"></a>
+                            <a href="#" class="circle circle8"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#"><img src="./images/banner/banner104.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="./images/banner/banner311.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="./images/banner/banner324.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="./images/banner/banner328.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="./images/banner/banner331.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="./images/banner/banner332.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="./images/banner/banner334.jpg" class="d-block w-100" alt="..."></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 手機 三張小圖和circle -->
+            <div class="small-pic-circle d-flex d-lg-none">
                 <div class="small-pic">
                     <a href="#">
                         <!-- 三張小圖，用背景做 -->
-                        <div class="live">
+                        <div class="first">
                             <!-- 小圖的邊框，用背景做 -->
                             <div class="pic-border"></div>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="culture">
+                        <div class="second">
                             <div class="pic-border"></div>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="fingers">
+                        <div class="third">
                             <div class="pic-border"></div>
                         </div>
                     </a>
@@ -82,6 +164,7 @@
                 </div>
             </div>
 
+
             <!-- 中間區域的文字 -->
             <div class="center-text">
                 <p class="top-pic-text">TOPICS!</p>
@@ -89,13 +172,337 @@
                 <p><a href="#">「ごめんねFingers crossed」スペシャルイベント＆スペシャルプレゼント特設サイトはこちら！</a></p>
             </div>
 
+
             <!-- 主要內容區域 -->
-            <div class="main">
+            <div class="main d-flex flex-coulmn d-lg-flex flex-lg-row">
                 <!-- 右側 -->
                 <div class="right">
                     <!-- 橫圖 -->
                     <div class="nogikoi">
-                        <img src="./images/bnr_nogikoi4.jpg" alt="">
+                        <a href="#"><img src="./images/bnr_nogikoi4.jpg" alt=""></a>
+                    </div>
+
+                    <!-- 手機月曆 -->
+                    <div class="calendar-schedule  d-block d-lg-none">
+                        <!-- 背景圖用bgc添加 -->
+                        <div class="calendar-tag">
+                            <!-- title用bgc添加 -->
+                            <div class="title"></div>
+                        </div>
+                    
+                        <!-- 月曆區域 -->
+                        <div class="calendar-main">
+                            <!-- 標題 -->
+                            <div class="calendar-title">
+                                <form action="">
+                                    <a href="#" class="last-month">←前月</a>
+                                </form>
+                                <p class="the-month">2021<span>07</span></p>
+                                <form action="">
+                                    <a href="#" class="next-month">翌月→</a>
+                                </form>
+                            </div>
+                            <!-- 月曆表格 -->
+                            <div class="calendar-bd">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th class="sun">SUN</th>
+                                            <th>MON</th>
+                                            <th>TUE</th>
+                                            <th>WED</th>
+                                            <th>THE</th>
+                                            <th>FRI</th>
+                                            <th>SAT</th>
+                                        </tr>
+                                        <tr>
+                                            <!-- 空白格子 -->
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <!-- 格子內分為上下兩區，上面放日期數字，下面放三角 -->
+                                            <td><a href="#">
+                                                    <span>1</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                        <img src="./images/small/schedule-live.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                        <img src="./images/small/schedule-release.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>2</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                        <img src="./images/small/schedule-live.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                        <img src="./images/small/schedule-release.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>3</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                        <img src="./images/small/schedule-live.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                        <img src="./images/small/schedule-release.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">
+                                                    <span>4</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>5</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>6</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>7</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>8</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>9</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>10</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-magazine.png" alt="">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">
+                                                    <span>11</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>12</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>13</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                        <img src="./images/small/schedule-release.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>14</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>15</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>16</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>17</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-web.png" alt="">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">
+                                                    <span>18</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>19</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>20</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>21</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>22</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>23</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>24</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-theatre.png" alt="">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">
+                                                    <span>25</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>26</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>27</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>28</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>29</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>30</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                    </span>
+                                                </a></td>
+                                            <td><a href="#">
+                                                    <span>31</span>
+                                                    <span>
+                                                        <img src="./images/small/schedule-tv.png" alt="">
+                                                        <img src="./images/small/schedule-radio.png" alt="">
+                                                        <img src="./images/small/schedule-handshake.png" alt="">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 新着情報 -->
@@ -204,7 +611,7 @@
                             <p class="date">2021.07.12</p>
                             <!-- 日期後面的三角TV用::before添加 -->
                             <p class="item-text">
-                                <a href="#">13:00～14:55 TOKYO FM「山崎怜奈の誰かに話したかったこと。」山崎怜奈.</a>
+                                <a href="#">13:00～14:55 TOKYO FM「山崎怜奈の誰かに話したかったこと。」山崎怜奈</a>
 
                             </p>
                         </div>
@@ -396,9 +803,11 @@
 
 
                 <!-- 左側 -->
-                <div class="left">
+                <div class="left ">
+
+                    <!-- 桌機 -->
                     <!-- 活動カレンダー -->
-                    <div class="calendar-schedule">
+                    <div class="calendar-schedule d-none d-lg-block">
                         <!-- 背景圖用bgc添加 -->
                         <div class="calendar-tag">
                             <!-- title用bgc添加 -->
@@ -722,7 +1131,7 @@
                         <div class="schedule-main">
                             <!-- 標題 -->
                             <div class="schedule-title">
-                                <h4>2021.07.13のスケジュール</h4>
+                                <h4>2021.07.12のスケジュール</h4>
                                 <img src="./images/today.gif" alt="">
                             </div>
                             <!-- 內容 -->
@@ -730,7 +1139,7 @@
                                 <div class="item">
                                     <!-- 三角TV用::after添加 -->
                                     <p class="item-text">
-                                        <a href="#">「松村沙友理 乃木坂46卒業記念写真集『次、いつ会える？』」松村沙友理</a>
+                                        <a href="#">12:25〜15:00 東海ラジオ「OH！ MY CHANNEL！」佐藤楓</a>
                                     </p>
                                 </div>
                                 <div class="item">
@@ -742,19 +1151,19 @@
                                 <div class="item">
                                     <!-- 三角TV用::after添加 -->
                                     <p class="item-text">
-                                        <a href="#">21:00～23:00 FM FUJI「タイムちゃん」矢久保美緒</a>
+                                        <a href="#">18:45～21:48 テレビ朝日系「Qさま!! 3時間SP」高山一実、山崎怜奈、北川悠理</a>
                                     </p>
                                 </div>
                                 <div class="item">
                                     <!-- 三角TV用::after添加 -->
                                     <p class="item-text">
-                                        <a href="#">21:30～ SHOWROOM 松村沙友理</a>
+                                        <a href="#">19:00〜19:30 SHOWROOM「のぎおび」清宮レイ</a>
                                     </p>
                                 </div>
                                 <div class="item">
                                     <!-- 三角TV用::after添加 -->
                                     <p class="item-text">
-                                        <a href="#">22:00〜23:12 TBS系「火曜ドラマ『プロミス・シンデレラ』」松村沙友理</a>
+                                        <a href="#">24:15～24:45 テレビ朝日系「しくじり先生」高山一実</a>
                                     </p>
                                 </div>
                                 <div class="item">
@@ -766,22 +1175,14 @@
                                 <div class="item">
                                     <!-- 三角TV用::after添加 -->
                                     <p class="item-text">
-                                        <a href="#">24:30～25:00 テレビ東京系「芸人動画チューズデー」金川紗耶
+                                        <a href="#">25:29～25:59 日本テレビ「乃木坂スター誕生！」
                                         </a>
                                     </p>
                                 </div>
                                 <div class="item">
                                     <!-- 三角TV用::after添加 -->
                                     <p class="item-text">
-                                        <a href="#">25:00～26:00 MBSラジオ「イマドキッ」松村沙友理
-                                        </a>
-                                    </p>
-                                </div>
-                                <div class="item">
-                                    <!-- 三角TV用::after添加 -->
-                                    <p class="item-text">
-                                        <a href="#">「日刊スポーツ『坂道の火曜日』」秋元真夏
-
+                                        <a href="#">「Sweet」齋藤飛鳥
                                         </a>
                                     </p>
                                 </div>
@@ -840,22 +1241,48 @@
         <footer>
             <div class="container">
                 <div class="link">
+
+                    <!-- 桌機 -->
                     <!-- 精靈圖 -->
-                    <div class="nav-link">
+                    <div class="nav-link d-none d-lg-flex">
                         <div><a href="#" class="doko"></a></div>
                         <div><a href="#" class="producer"></a></div>
                         <div><a href="#" class="faq"></a></div>
                         <div><a href="#" class="ask"></a></div>
                     </div>
                     <!-- 精靈圖 -->
-                    <div class="sns">
+                    <div class="sns  d-none d-lg-flex">
                         <div><a href="#" class="idol"></a></div>
                         <div><a href="#" class="twitter"></a></div>
                         <div><a href="#" class="fb"></a></div>
                     </div>
+
+                    <!-- 手機 -->
+                    <!-- 精靈圖 -->
+                    <div class="nav-link d-flex d-lg-none">
+                        <!-- front 和 back 是手機排版用 -->
+                        <div class="front">
+                            <div><a href="#" class="doko"></a></div>
+                            <div><a href="#" class="producer"></a></div>
+                        </div>
+                        <!-- front 和 back 是手機排版用 -->
+                        <div class="back">
+                            <div><a href="#" class="faq"></a></div>
+                            <div><a href="#" class="ask"></a></div>
+                        </div>
+                    </div>
+                    <!-- 精靈圖 -->
+                    <div class="sns d-flex d-lg-none">
+                        <!-- front是手機排版用 -->
+                        <div class="front">
+                            <div><a href="#" class="idol"></a></div>
+                            <div><a href="#" class=" twitter"></a></div>
+                        </div>
+                        <div><a href="#" class="fb"></a></div>
+                    </div>
                 </div>
 
-                <!-- 書本是bgc -->
+                <!-- 書本圖是bgc -->
                 <div class="footjasrac">
                     <p>JASRAC許諾第9015545002Y38029号</p>
                     <p>JASRAC許諾第9015545001Y45040号</p>
@@ -871,7 +1298,17 @@
 
 
 
+    <script src="./jquery-3.6.0/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            // 點擊漢堡選單，就讓navbar顯示
+            $('.hum').click(function () {
+                $('.hum .nav').stop().slideToggle(300);
+            })
 
+        })
+    </script>
 
 </body>
 

@@ -6,20 +6,28 @@
 }
 
 a{
-    color: purple
+    color: purple;
+    text-decoration: underline;
+}
+
+p{
+    margin-bottom: 0;
 }
 
 li{
     list-style-type: none;
 }
 
+img{
+    max-width: 100%;
+}
+/* 頂部背景圖 */
 .wrap{
     background: #fff url(./images/bg.jpg) center 0 repeat-x;
 }
 
-.container{
-    width: 980px;
-    margin: auto;
+.w1010{
+    max-width: 1010px;
 }
 
 .flex-coulmn{
@@ -34,6 +42,7 @@ li{
     height: 53px;
     border-radius: 7px;
     overflow: hidden; 
+    z-index: 100;
 }
 .lang-selector img{
     width: 100%;
@@ -41,6 +50,7 @@ li{
 }
 
 .header{
+    width: 100%;
     background-color: #fff;
     border-radius: 0 0 10px 10px;
     padding:15px;
@@ -55,12 +65,6 @@ li{
 .logo a img{
     width: 100%;
     height: 100%;
-}
-
-.nav{
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .nav li{
@@ -116,11 +120,66 @@ li{
     background-position: -840px 0;
 }
 
-.banner{
-position: relative;
+@media screen and (max-width:992px){
+    /* 把navbar每個li都切成圓角，然後hidden */
+.nav li{
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.banner>img{
+/* 調整背景圖size */
+.wrap{
+    background: #fff url(./images/bg.jpg) center 0 repeat-x;
+    background-size: 15%;
+}
+    /* header添加flex，logo和hum左右對齊 */
+    .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    /* logo縮小 */
+    .logo{
+    width: 50%;
+    height:50%;
+}
+/* 漢堡選單 */
+.hum .fas{
+    position:relative;
+    font-size: 40px;
+    padding-right: 10px;
+    color:#812990;
+}
+/* 手機nav */
+.hum .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    z-index: 100;
+}
+}
+
+/* 漢堡選單尺寸調整 */
+@media screen and (max-width:768px){
+    .hum .fas{
+    font-size: 36px;
+}
+}
+
+/* 漢堡選單尺寸調整 */
+@media screen and (max-width:375px){
+    .hum .fas{
+    font-size: 32px;
+}
+}
+
+#carouselExampleControls{
+position: relative;
+margin-bottom: 15px;;
+}
+
+#carouselExampleControls img{
     border-radius: 10px;
 }
 
@@ -130,47 +189,39 @@ flex-direction: column;
 position: absolute;
 top: 15px;
 right:10px;
+z-index: 10;
 }
 
-/* banner裡的三張圖，用背景做 */
-.small-pic .live{
+/* 輪播裡的三張圖，用背景做 */
+.small-pic .first{
    width: 205px;
    height: 88px;
    margin-bottom: 5px;
-   background: url(./images/banner327.png);
+   background: url(./images/banner/banner333.png);
 
 }
-.small-pic .culture{
+.small-pic .second{
     width: 205px;
     height: 88px;
     margin-bottom: 5px;
-    background: url(./images/banner331.png);
+    background: url(./images/banner/banner332.png);
 
 }
-.small-pic .fingers{
+.small-pic .third{
     width: 205px;
     height: 88px;
     margin-bottom: 5px;
-    background: url(./images/banner324.png);
+    background: url(./images/banner/banner327.png);
 }
 
 /* 幫三張圖添加邊框 */
-.small-pic .live .pic-border{
+.small-pic .first .pic-border,
+.small-pic .second .pic-border,
+.small-pic .third .pic-border{
    width: 205px;
    height: 88px;
    background: url(./images/idxbanner_interface.png);
 
-}
-.small-pic .culture .pic-border{
-    width: 205px;
-    height: 88px;
-    background: url(./images/idxbanner_interface.png);
-
-}
-.small-pic .fingers .pic-border{
-    width: 205px;
-    height: 88px;
-    background: url(./images/idxbanner_interface.png);
 }
 
 /* 輪播整體定位 */
@@ -182,6 +233,7 @@ right:10px;
     height: 30px;
     background-color: #fff;
     border-radius: 5px 5px 0 0;
+    z-index:10;
 }
 
 .circle-group{
@@ -190,6 +242,7 @@ right:10px;
     width: 141px;
     height: 25px;
     left: 7px;
+    z-index:10;
 }
 
 /* 輪播選單的共同大小 */
@@ -256,17 +309,199 @@ right:10px;
     left:126px;
 }
 
+
+@media screen and (max-width:992px){
+
+/* 三張小圖片 */
+.small-pic{
+/* 取消絕對定位 讓圖片佔有位置*/
+margin: 15px 0;
+width: 100%;
+display: flex;
+justify-content:column;
+align-items: center;
+position: inherit;
+}
+
+/* 螢幕小於992px 隱藏輪播按鈕 */
+.circle-wrap{
+    display:none;
+}
+
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .first{
+   width: 760px;
+   height: 326px;
+   margin-bottom: 5px;
+   background: url(./images/banner/banner333.png);
+   background-size: 100% 100%;
+   overflow: hidden;
+
+}
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .second{
+    width: 760px;
+    height: 326px;
+    margin-bottom: 5px;
+    background: url(./images/banner/banner332.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+
+}
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .third{
+    width: 760px;
+    height: 326px;
+    margin-bottom: 5px;
+    background: url(./images/banner/banner327.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+/* 修改邊框大小 */
+.small-pic .first .pic-border,
+.small-pic .second .pic-border,
+.small-pic .third .pic-border{
+   width: 760px;
+   height: 760px;
+   background: url(./images/idxbanner_interface.png) no-repeat;
+   background-size: 100% 100%;
+}
+
+}
+
+@media screen and (max-width:768px){
+    /* 三張小圖片 */
+.small-pic{
+/* 取消絕對定位 讓圖片佔有位置*/
+margin: 15px 0;
+width: 100%;
+display: flex;
+justify-content:column;
+align-items: center;
+position: inherit;
+}
+
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .first{
+   width: 570px;
+   height: 245px;
+   margin-bottom: 5px;
+   background: url(./images/banner/banner333.png);
+   background-size: 100% 100%;
+   overflow: hidden;
+
+}
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .second{
+    width: 570px;
+    height: 245px;
+    margin-bottom: 5px;
+    background: url(./images/banner/banner332.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+
+}
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .third{
+    width: 570px;
+    height: 245px;
+    margin-bottom: 5px;
+    background: url(./images/banner/banner327.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+/* 修改邊框大小 */
+.small-pic .first .pic-border,
+.small-pic .second .pic-border,
+.small-pic .third .pic-border{
+   width: 570px;
+   height: 570px;
+   background: url(./images/idxbanner_interface.png) no-repeat;
+   background-size: 100% 100%;
+}
+
+}
+
+@media screen and (max-width:576px){
+    /* 三張小圖片 */
+.small-pic{
+/* 取消絕對定位 讓圖片佔有位置*/
+margin: 15px 0;
+width: 100%;
+display: flex;
+justify-content:column;
+align-items: center;
+position: inherit;
+}
+
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .first{
+   width: 350px;
+   height: 150px;
+   margin-bottom: 5px;
+   background: url(./images/banner/banner333.png);
+   background-size: 100% 100%;
+   overflow: hidden;
+
+}
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .second{
+    width: 350px;
+    height: 150px;
+    margin-bottom: 5px;
+    background: url(./images/banner/banner332.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+
+}
+/* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
+.small-pic .third{
+    width: 350px;
+    height: 150px;
+    margin-bottom: 5px;
+    background: url(./images/banner/banner327.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+/* 修改邊框大小 */
+.small-pic .first .pic-border,
+.small-pic .second .pic-border,
+.small-pic .third .pic-border{
+   width: 350px;
+   height: 350px;
+   background: url(./images/idxbanner_interface.png) no-repeat;
+   background-size: 100% 100%;
+}
+
+}
+
+@media screen and (max-width:375px){
+.circle-wrap{
+    /* 顯示輪播按鈕 */
+    display:block;
+    /* 調整絕對定位，讓輪播按鈕到正確的位置 */
+    top:160px;
+    left:200px;
+}
+}
+
+
 .center-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .top-pic-text{
     font-size: 14px;
     background-color: #ffff00;
     color:#7e1083;
+    margin-bottom: 5px;
 }
 
 .center-text p a {
@@ -279,7 +514,21 @@ right:10px;
 }
 
 .center-text p:nth-child(2){
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 992px){
+    #carouselExampleControls{
+    margin-bottom: 10px;;
+}
+    .center-text{
+    margin-bottom: 10px;
+}
+    /* 文字置中 */
+    .center-text p{
+    text-align: center;
+}
+
 }
 
 .main{
@@ -427,6 +676,7 @@ right:10px;
     left: 10px;
     background: url(./images/schedule-tv.png) no-repeat;
 }
+
 /* 部落格和影片區 */
 .blog-video{
     width: 100%;
@@ -474,7 +724,13 @@ right:10px;
 .blog .item:last-child{
     border-radius: 0 0 5px 5px;
 }
-
+/* 固定圖片寬度 用shrink防止圖片縮小*/
+.blog .item .pic{
+    width: 71px;
+    height: 109px;
+    flex-shrink: 0;
+}
+   
 .blog .item .text{
    padding:0 10px;
 }
@@ -570,7 +826,39 @@ right:10px;
     padding: 10px 0 5px 0;
 }
 
-/* 左側上方的閱歷和行事曆 */
+@media screen and (max-width:992px){
+    /* main在小螢幕時是是設定column，因此要將right和left的寬度設為100%，並且right要在前面 order:0 */
+.right{
+    width: 100%;
+    order:0
+}
+
+.left{
+    width: 100%;
+}
+/* blog和video也設定成column*/
+
+.blog-video{
+    display: flex;
+    flex-direction: column;
+}
+
+/* blog和video 寬度100% */
+.blog,
+.video{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+iframe {
+    width:100%;
+    height:100%;
+}
+
+}
+
+
+/* 左側上方的月曆和行事曆 */
 .calendar-schedule{
     border:1px solid purple;
     margin-bottom: 10px;
@@ -786,6 +1074,88 @@ right:10px;
     left: 135px;
 }
 
+/* 調整sns裡面的位置 */
+@media screen and (max-width:992px){
+    /* 調整sns的位置 */
+.snsbtns .b107{
+    top: 20px;
+    left: 410px;
+}
+.snsbtns .fb{
+    top: 20px;
+    left: 480px;
+}
+.snsbtns .mixi{
+    top: 50px;
+    left: 350px;
+}
+.snsbtns .twitter{
+    top: 50px;
+    left: 445px;
+}
+}
+
+@media screen and (max-width:768px){
+    /* 調整sns的位置 */
+.snsbtns .b107{
+    top: 20px;
+    left: 300px;
+}
+.snsbtns .fb{
+    top: 20px;
+    left: 360px;
+}
+.snsbtns .mixi{
+    top: 50px;
+    left: 243px;
+}
+.snsbtns .twitter{
+    top: 50px;
+    left: 330px;
+}
+}
+
+@media screen and (max-width:576px){
+    /* 調整sns的位置 */
+.snsbtns .b107{
+    top: 20px;
+    left: 200px;
+}
+.snsbtns .fb{
+    top: 20px;
+    left: 260px;
+}
+.snsbtns .mixi{
+    top: 50px;
+    left: 140px;
+}
+.snsbtns .twitter{
+    top: 50px;
+    left: 225px;
+}
+}
+
+@media screen and (max-width:375px){
+    /* 調整sns的位置 */
+.snsbtns .b107{
+    top: 20px;
+    left: 145px;
+}
+.snsbtns .fb{
+    top: 20px;
+    left: 200px;
+}
+.snsbtns .mixi{
+    top: 50px;
+    left: 85px;
+}
+.snsbtns .twitter{
+    top: 50px;
+    left: 170px;
+
+}
+}
+
 .online{
     border:1px solid purple;
     padding: 15px;
@@ -851,6 +1221,41 @@ right:10px;
 
 .web p .tw:hover{
     opacity: .5;
+}
+
+@media screen and (max-width:992px){
+    /* 讓位置置中 */
+    .bnrs{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    /* 調整圖片大小 */
+    .bnrs img{
+        width: 760px;
+        height: 268px;
+        margin-bottom:7px;
+    }
+    .web>a{
+        display:flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:768px){
+    /* 調整圖片大小 */
+    .bnrs img{
+        width: 570px;
+        height: 201px;
+    }
+}
+@media screen and (max-width:576px){
+    /* 調整圖片大小 */
+    .bnrs img{
+        width: 370px;
+        height: 130px;
+    }
 }
 
 footer{
@@ -921,13 +1326,13 @@ footer .nav-link .ask{
 }
 /* 精靈圖左五到六 */
 footer .sns .idol{
-    background: url(./images/footer.gif) -558px 0 no-repeat;
+    background: url(./images/footer.gif) -126px -28px no-repeat;
 }
 footer .sns .twitter{
-    background: url(./images/footer.gif) -401px 0 no-repeat;
+    background: url(./images/footer.gif) -558px 0 no-repeat;
 }
 footer .sns .fb{
-    background: url(./images/footer.gif) -126px -28px no-repeat;
+    background: url(./images/footer.gif) -401px 0 no-repeat;
 }
 
 
@@ -952,4 +1357,36 @@ footer .sns .fb{
     width: 116px;
     height: 20px;
     background: url(./images/footer.gif) 0 -30px no-repeat;
+}
+
+@media screen and (max-width:992px){
+    /* 讓link內的front和back上下排列 */
+    footer .link{
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+    /* 讓sns內的front和fb上面排列 */
+    footer .sns {
+        display: flex;
+        flex-direction: column;
+}
+
+/* 讓idol和twitter水平對齊 */
+    footer .sns .front{
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    /* 調整 ©乃木坂46LLC 的間距 */
+    footer .link::after{
+    margin-top:20px
+}
+/* 微調返回頭部的位置 */
+.ptop{
+    top: -39px;
+    
+}
+
 }
