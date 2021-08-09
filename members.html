@@ -19,9 +19,45 @@
 <body>
 
     <div class="wrap">
-        <!-- 語言選擇框 -->
+         <!-- 語言選擇框 -->
         <div class="lang-selector">
-            <a href="#"><img src="./images/Snipaste_2021-07-13_16-11-23.png" alt=""></a>
+            <a href="#"><img src="./images/Snipaste_2021-07-13_16-11-23.png" alt="">
+            </a>
+            <ul>
+                <li>
+                    <!-- div是小圓點 -->
+                    <div></div>
+                    <span>日本語</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>English</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>简体中文</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>繁體中文</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>ภาษาไทย</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>한국어</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>Bahasa Melayu</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>Bahasa Indonesia</span>
+                </li>
+            </ul>
         </div>
 
         <div class="container w1010">
@@ -784,6 +820,17 @@
             // 點擊漢堡選單，就讓navbar顯示
             $('.hum').click(function () {
                 $('.hum .nav').stop().slideToggle(300);
+            })
+
+            // 點擊語言選單，就讓ul顯示
+            $('.lang-selector img').click(function () {
+                $('.lang-selector ul').stop().slideToggle(300);
+            })
+
+            // 點擊li，就讓當前的小圓點顯示，其他li的小圓點隱藏
+            $('.lang-selector li').click(function () {
+                $(this).find('div').show();
+                $(this).siblings().find('div').hide();
             })
 
         })

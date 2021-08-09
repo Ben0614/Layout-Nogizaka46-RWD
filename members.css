@@ -56,6 +56,47 @@ img {
     height: 100%;
 }
 
+/* 用fixed，位置設定與複層一樣 */
+.lang-selector ul {
+    display: none;
+    background-color: #812990;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 140px;
+    height: content;
+}
+
+.lang-selector ul li {
+    position: relative;
+    padding: 10px 0 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* 文字 */
+.lang-selector ul li span {
+    padding-left: 5px;
+}
+
+/* 小圓點  absolute定位*/
+.lang-selector ul li div {
+    display: none;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* 觸碰到當前li時改變背景色 */
+.lang-selector ul li:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
 .header {
     width: 100%;
     background-color: #fff;
