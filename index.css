@@ -26,13 +26,9 @@ img {
 .wrap {
     background: #fff url(./images/bg.jpg) center 0 repeat-x;
 }
-
+/* 原本網站是980px，container會有左右padding 15px，所以寬度要多30px */
 .w1010 {
     max-width: 1010px;
-}
-
-.flex-coulmn {
-    flex-direction: column;
 }
 
 /* 語言選擇框 */
@@ -612,6 +608,7 @@ img {
     padding-top: 7px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
