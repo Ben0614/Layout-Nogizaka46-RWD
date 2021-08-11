@@ -26,6 +26,7 @@ img {
 .wrap {
     background: #fff url(./images/bg.jpg) center 0 repeat-x;
 }
+
 /* 原本網站是980px，container會有左右padding 15px，所以寬度要多30px */
 .w1010 {
     max-width: 1010px;
@@ -41,6 +42,10 @@ img {
     border-radius: 7px;
     overflow: hidden;
     z-index: 100;
+}
+
+.lang-selector>.pic {
+    cursor: pointer;
 }
 
 .lang-selector img {
@@ -60,16 +65,18 @@ img {
 }
 
 .lang-selector ul li {
-    position:relative;
+    position: relative;
     padding: 10px 0 10px 20px;
     color: #fff;
     font-weight: 700;
     cursor: pointer;
 }
+
 /* 文字 */
 .lang-selector ul li span {
     padding-left: 5px;
 }
+
 /* 小圓點  absolute定位*/
 .lang-selector ul li div {
     display: none;
@@ -81,6 +88,7 @@ img {
     background-color: #fff;
     border-radius: 50%;
 }
+
 /* 觸碰到當前li時改變背景色 */
 .lang-selector ul li:hover {
     background: rgba(0, 0, 0, .5);

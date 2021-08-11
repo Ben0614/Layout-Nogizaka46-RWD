@@ -47,6 +47,10 @@ img {
     z-index: 100;
 }
 
+.lang-selector>.pic {
+    cursor: pointer;
+}
+
 .lang-selector img {
     width: 100%;
     height: 100%;
