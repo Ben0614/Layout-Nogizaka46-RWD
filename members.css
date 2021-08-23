@@ -782,6 +782,10 @@ h3::after {
     text-decoration: none;
 }
 
+.video .item-group .item>p:hover a {
+    color: #e2347a;
+}
+
 /* 最底下的三個連結 */
 .video .item-group .extra {
     display: flex;
@@ -792,6 +796,10 @@ h3::after {
 
 .video .item-group .extra p {
     padding: 10px 0 5px 0;
+}
+
+.video .item-group .extra p:hover a {
+    color: #e2347a;
 }
 
 @media screen and (max-width:992px) {
