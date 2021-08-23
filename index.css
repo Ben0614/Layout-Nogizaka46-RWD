@@ -41,7 +41,7 @@ img {
     height: 53px;
     border-radius: 7px;
     overflow: hidden;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .lang-selector>.pic {
@@ -116,6 +116,7 @@ img {
 .nav li {
     width: 105px;
     height: 46px;
+    
 }
 
 .nav li:hover {
@@ -234,16 +235,6 @@ img {
     }
 }
 
-#carouselExampleControls {
-    position: relative;
-    margin-bottom: 15px;
-    ;
-}
-
-#carouselExampleControls img {
-    border-radius: 10px;
-}
-
 .small-pic {
     display: flex;
     flex-direction: column;
@@ -287,97 +278,6 @@ img {
 
 }
 
-/* 輪播整體定位 */
-.circle-wrap {
-    position: absolute;
-    top: 271px;
-    left: 601px;
-    width: 155px;
-    height: 30px;
-    background-color: #fff;
-    border-radius: 5px 5px 0 0;
-    z-index: 10;
-}
-
-.circle-group {
-    position: absolute;
-    background-color: #fff;
-    width: 141px;
-    height: 25px;
-    left: 7px;
-    z-index: 10;
-}
-
-/* 輪播選單的共同大小 */
-.circle {
-    width: 15px;
-    height: 15px;
-}
-
-/* 輪播選單 */
-.circle1 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: 0 -176px;
-    top: 6px;
-    left: 0;
-}
-
-.circle2 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: -15px -176px;
-    top: 6px;
-    left: 18px;
-}
-
-.circle3 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: -30px -176px;
-    top: 6px;
-    left: 36px;
-}
-
-.circle4 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: -45px -176px;
-    top: 6px;
-    left: 54px;
-}
-
-.circle5 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: -60px -176px;
-    top: 6px;
-    left: 72px;
-}
-
-.circle6 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: -75px -176px;
-    top: 6px;
-    left: 90px;
-}
-
-.circle7 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: -90px -176px;
-    top: 6px;
-    left: 108px;
-}
-
-.circle8 {
-    position: absolute;
-    background: url(./images/idxbanner_interface.png);
-    background-position: -105px -176px;
-    top: 6px;
-    left: 126px;
-}
 
 
 @media screen and (max-width:992px) {
@@ -385,17 +285,14 @@ img {
     /* 三張小圖片 */
     .small-pic {
         /* 取消絕對定位 讓圖片佔有位置*/
+        /* right要改成0，不然圖片會歪掉 */
+        right: 0;
         margin: 15px 0;
         width: 100%;
         display: flex;
         justify-content: column;
         align-items: center;
         position: inherit;
-    }
-
-    /* 螢幕小於992px 隱藏輪播按鈕 */
-    .circle-wrap {
-        display: none;
     }
 
     /* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
@@ -406,7 +303,6 @@ img {
         background: url(./images/banner/banner333.png);
         background-size: 100% 100%;
         overflow: hidden;
-
     }
 
     /* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
@@ -417,7 +313,6 @@ img {
         background: url(./images/banner/banner332.png);
         background-size: 100% 100%;
         overflow: hidden;
-
     }
 
     /* 修改圖片大小，並用size延展，框線的部分多餘的用hidden隱藏 */
@@ -556,16 +451,6 @@ img {
 
 }
 
-@media screen and (max-width:375px) {
-    .circle-wrap {
-        /* 顯示輪播按鈕 */
-        display: block;
-        /* 調整絕對定位，讓輪播按鈕到正確的位置 */
-        top: 160px;
-        left: 200px;
-    }
-}
-
 
 .center-text {
     display: flex;
@@ -598,7 +483,6 @@ img {
 @media screen and (max-width: 992px) {
     #carouselExampleControls {
         margin-bottom: 10px;
-        ;
     }
 
     .center-text {
