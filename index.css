@@ -53,7 +53,7 @@ img {
     height: 100%;
 }
 
-/* 用fixed，位置設定與複層一樣 */
+/* 用fixed，位置設定與父層一樣 */
 .lang-selector ul {
     display: none;
     background-color: #812990;
