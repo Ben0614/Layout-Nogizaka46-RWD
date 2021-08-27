@@ -132,48 +132,48 @@ img {
 
 /* navbar的樣式 */
 .nav li .m1 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: 0 0;
 }
 
 .nav li .m2 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -105px 0;
 }
 
 .nav li .m3 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -210px 0;
 }
 
 .nav li .m4 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -315px 0;
 }
 
 .nav li .m5 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -420px 0;
 }
 
 .nav li .m6 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -525px 0;
 }
 
 .nav li .m7 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -630px 0;
 }
 
 .nav li .m8 {
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -735px 0;
 }
 
 .nav li .m9 {
     width: 110px;
-    background: url(./images/_menu.gif) 0 0 no-repeat;
+    background: url(./images/menu.gif) 0 0 no-repeat;
     background-position: -840px 0;
 }
 
